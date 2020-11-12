@@ -2,7 +2,12 @@
 # Java
 target/
 
+# IDEA
+
 # vscode
+.vscode
 .settings
 .project
 .classpath
+
+ignore

@@ -9,5 +9,8 @@
         <module name="AnimalsOlympics" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AnimalsOlympics" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
