@@ -4,7 +4,7 @@ package com.olympics.animal;
 /**
  * Cat
  */
-public class Cat extends Animal {
+public class Cat extends CatFamily {
 
     
 }
