@@ -6,7 +6,7 @@ import java.util.List;
 //单例模式创建通知中心
 public class InformCenter implements Inform{
     private InformCenter(){
-        
+        System.out.println("单例模式:只有一个通知中心");
     }
     private static InformCenter informCenter=null;
     //获得通知中心
