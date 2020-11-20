@@ -11,4 +11,8 @@ public class runner extends athlete{
         mAnimal.say();
     }
 
+    @Override
+    public void update(String message) {
+        System.out.println(fanName + "知道了:" + message + "这条消息");
+    }
 }
