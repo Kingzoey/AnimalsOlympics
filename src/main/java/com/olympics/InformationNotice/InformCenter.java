@@ -6,7 +6,7 @@ import java.util.List;
 //单例模式创建通知中心
 public class InformCenter implements Inform{
     private InformCenter(){
-        System.out.println("单例模式:只有一个通知中心");
+        System.out.println("单例模式:创建唯一一个通知中心");
     }
     private static InformCenter informCenter=null;
     //获得通知中心
@@ -17,25 +17,23 @@ public class InformCenter implements Inform{
         return informCenter;
     }
 
-    private List<athlete> fanList = new ArrayList<athlete>();
+    private List<athlete> athleteList = new ArrayList<athlete>();
     
     @Override
-    public void addFan(athlete fan){
-        fanList.add(fan);
+    public void addAthlete(athlete fan){
+        athleteList.add(fan);
     }
     @Override
-    public void deFan(athlete fan){
-        fanList.remove(fan);
+    public void deAthlete(athlete fan){
+        athleteList.remove(fan);
     }
     @Override
-    public void Tnotify(String message){
-        for(athlete fan : fanList){
+    public void toNotify(String message){
+        for(athlete fan : athleteList){
             fan.update(message);
         }
        
     }
-    public void saytext(){
-        System.out.println("hhh");
-    }
+    
 
 }

@@ -1,7 +1,5 @@
 package com.olympics.InformationNotice;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class InformNote extends InformNotesTemplate{
     public static void main(String[] args) {
  
@@ -17,11 +15,22 @@ public class InformNote extends InformNotesTemplate{
         //创建发布中心
         InformCenter FC = InformCenter.getInformCenter();
         //创建动物运动员
+        
         athlete dog_runner = new runner(new dog());
-        dog_runner.setName("大黄");
-        FC.addFan(dog_runner);
+        dog_runner.setName("小狗");
+        athlete cat_runner = new runner(new cat());
+        cat_runner.setName("小猫");
+        athlete bear_runner = new runner(new bear());
+        bear_runner.setName("小熊");
+        //桥接
         dog_runner.competition();
-        FC.Tnotify("开始比赛");
+        cat_runner.competition();
+        bear_runner.competition();
+        //观察者模式
+        FC.addAthlete(dog_runner);
+        FC.addAthlete(cat_runner);
+        FC.addAthlete(bear_runner);
+        FC.toNotify("比赛开始时间");
         
     }
 
