@@ -7,4 +7,5 @@ import java.util.*;
  */
 public class Sport {
 
+    public String date;
 }
