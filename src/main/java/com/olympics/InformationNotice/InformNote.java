@@ -11,7 +11,7 @@ public class InformNote extends InformNotesTemplate{
 
     @Override
     void startInform() {
-        System.out.println("模板模式开始");
+        
         //创建发布中心
         InformCenter FC = InformCenter.getInformCenter();
         //创建动物运动员
@@ -34,8 +34,4 @@ public class InformNote extends InformNotesTemplate{
         
     }
 
-    @Override
-    void endInform() {
-        System.out.println("比赛信息发布结束，模板模式结束");
-    }
 }
