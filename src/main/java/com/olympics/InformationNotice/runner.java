@@ -6,9 +6,13 @@ public class runner extends athlete{
         super(Animal);
     }
     @Override
-    public void competition() {
-        System.out.println("我参加跑步");
-        mAnimal.say();
+    public void competition() { 
+        mAnimal.sayAnimal();
+        System.out.println("我参加跑步比赛");
     }
 
+    @Override
+    public void update(String message) {
+        System.out.println("观察者模式:"+fanName + "知道了通知中心发布的" + message);
+    }
 }
