@@ -5,9 +5,7 @@ package com.olympics.Visitor;
  */
 public interface Visitor {
 
-    void visit(Football football);
+    void visit(Consumable consumable);
 
-    void visit(Basketball basketball);
-
-    void visit(Volleyball volleyball);
+    void visit(Equipment equipment);
 }

@@ -1,6 +1,6 @@
 package com.olympics;
 
-public class Main {
+public class Olympics {
     private static int index = 1;
     public static String test(String name){
         return index++ + ". " + name;
@@ -9,6 +9,7 @@ public class Main {
         System.out.println("动物运动会测试");
 
         System.out.println(test("多例模式"));
+        // 在这里添加该模式的测试代码
         
         System.out.println(test("外观模式"));
         
