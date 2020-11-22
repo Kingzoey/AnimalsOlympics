@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ignore/Design-Pattern-Java" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ignore/DesignPatternTest" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ignore/DesignPatternTest/design-pattern-program" vcs="Git" />
   </component>
 </project>
