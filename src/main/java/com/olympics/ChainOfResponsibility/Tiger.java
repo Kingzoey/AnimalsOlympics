@@ -1,11 +1,11 @@
 package com.olympics.ChainOfResponsibility;
 
-public class Turtle extends Athlete implements Handler {
-    private final float crawlSpeed;
+public class Tiger extends Athlete implements Handler {
+    private final int runSpeed;
 
-    public Turtle(String name, float crawlSpeed) {
+    public Tiger(String name, int runSpeed) {
         super(name);
-        this.crawlSpeed = crawlSpeed;
+        this.runSpeed = runSpeed;
     }
 
     @Override
@@ -15,6 +15,6 @@ public class Turtle extends Athlete implements Handler {
 
     @Override
     public float getSpeed() {
-        return crawlSpeed / 2;
+        return runSpeed;
     }
 }
