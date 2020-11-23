@@ -1,30 +1,26 @@
 package com.olympics.DependencyInjection;
 
-import java.util.Timer;
-import java.util.TimerTask;
+public class Competition extends DatabaseClient {
+    private final String name;
 
-public class Competition {
-    private DatabaseConnection conn;
-
-    public void setConn(DatabaseConnection conn) {
-        this.conn = conn;
+    public Competition(String name) {
+        this.name = name;
+        System.out.println(name + " 比赛即将开始");
     }
-    
+
     public void start() {
-        System.out.println("比赛正在进行中");
-        System.out.println("比赛结束, 保存比赛结果至数据库");
-        conn.query("INSERT INTO result VALUES(1)");
-        System.out.println("保存成功");
+        System.out.println(name + " 比赛正在进行中");
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(name + " 比赛圆满结束, 保存比赛结果至数据库");
+        saveResult();
     }
 
-    public static void main(String[] args) {
-        System.out.println("创建数据库连接对象");
-        DatabaseConnection conn = new DatabaseConnection();
-        
-        Competition comp = new Competition();
-        comp.setConn(conn);
-        comp.start();
-
-        System.out.println("销毁数据库连接对象");
+    public void saveResult() {
+        conn.query("INSERT INTO result VALUES(1)");
+        System.out.println("比赛结果保存成功");
     }
 }
