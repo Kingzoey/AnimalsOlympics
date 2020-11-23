@@ -31,6 +31,10 @@ public class Game {
      * @param gameMemento
      */
     public void restore(GameMemento gameMemento){
-        this.playerStep = gameMemento.getPlayerSteps();
+        this.playerStep = gameMemento.getPlayerStep();
     }
+
+	public void setPlayerStep(int i) {
+	}
+
 }
