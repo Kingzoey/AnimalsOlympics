@@ -27,17 +27,25 @@ public class Sports {
         swimming.date = "2020.08.19";
         swimming.place = "泳池";
 
-        Sports basketball= new Sports();
+        Sports basketball = new Sports();
         basketball.date = "2020.08.18";
         basketball.place = "篮球场";
 
-        Sports football= new Sports();
+        Sports football = new Sports();
         football.date = "2020.08.17";
         football.place = "足球场";
 
-        Sports fencing= new Sports();
+        Sports fencing = new Sports();
         fencing.date = "2020.08.14";
         fencing.place = "击剑馆";
+        
+        Sports badminton = new Sports();
+        badminton.date = "2020.11.11";
+        badminton.place = "羽毛球馆";
+        
+        Sports hurdle = new Sports();
+        hurdle.date = "2020.12.02";
+        hurdle.place = "操场";
         
         
         running.showPlaceof("跑步");

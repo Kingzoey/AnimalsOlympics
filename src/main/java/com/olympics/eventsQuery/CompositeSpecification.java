@@ -6,6 +6,6 @@ public abstract class CompositeSpecification implements ISpecification{
         return new AndSpecification(this,spec);
     }
     public ISpecification or(ISpecification spec){
-        return new AndSpecification(this,spec);
+        return new OrSpecification(this,spec);
     }
 }
