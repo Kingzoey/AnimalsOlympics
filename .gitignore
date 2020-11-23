@@ -4,6 +4,8 @@ target/
 
 # IDEA
 
+.idea
+
 # vscode
 .vscode
 .settings
