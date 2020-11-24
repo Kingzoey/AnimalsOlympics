@@ -1,7 +1,10 @@
 package com.olympics.DependencyInjection;
 
-public class DatabaseConnection {
-    public String query(String sql) {
-        return "ok";
-    }
+public interface DatabaseConnection {
+
+    public void connect();
+
+    public void disconnect();
+
+    public void query(String sql);
 }

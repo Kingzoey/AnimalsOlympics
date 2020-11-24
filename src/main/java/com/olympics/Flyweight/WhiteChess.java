@@ -1,13 +1,13 @@
 package com.olympics.Flyweight;
 
-//黑色棋子类
-public class BlackChessman extends AbstractChessman {
+//白色棋子
+public class WhiteChess extends AbstractChess {
     /**
-     * 构造方法 初始化黑棋子
+     * 构造方法 初始化白棋子
      */
-    public BlackChessman() {
-        super("●");
-        System.out.println("黑棋创建中 :-)");
+    public WhiteChess() {
+        super("○");
+        System.out.println("白棋创建中 :-)");
     }
 
     // 点坐标设置

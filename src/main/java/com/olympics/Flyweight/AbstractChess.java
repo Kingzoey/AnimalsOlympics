@@ -1,14 +1,14 @@
 package com.olympics.Flyweight;
 
 //棋子类
-public abstract class AbstractChessman {
+public abstract class AbstractChess {
     // 棋子坐标
     protected int x;
     protected int y;
     // 棋子类别（黑|白）
     protected String chess;
 
-    public AbstractChessman(String chess) {
+    public AbstractChess(String chess) {
         this.chess = chess;
     }
 

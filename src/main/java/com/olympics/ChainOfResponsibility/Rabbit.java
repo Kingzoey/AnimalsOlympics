@@ -1,14 +1,25 @@
 package com.olympics.ChainOfResponsibility;
 
-public class Rabbit implements Handler {
-    private final int speed;
+public class Rabbit extends Athlete implements Handler {
+    private final float jumpSpeed;
 
-    public Rabbit(int speed) {
-        this.speed = speed;
+    public Rabbit(String name, float jumpSpeed) {
+        super(name);
+        this.jumpSpeed = jumpSpeed;
+    }
+
+    /**
+     * 兔子通过跳跃完成比赛
+     * @param segment
+     * @return
+     */
+    @Override
+    public float process(Segment segment) {
+        return segment.getMeter() / getSpeed();
     }
 
     @Override
-    public Double process(Segment segment) {
-        return segment.getMeter() / (double)speed;
+    public float getSpeed() {
+        return 3 * jumpSpeed;
     }
 }

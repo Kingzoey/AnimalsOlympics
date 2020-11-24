@@ -7,7 +7,7 @@ public class Player {
         Game game = new Game();
         System.out.println("游戏开始，下棋10步");
         game.setPlayerStep(10);
-        //备份当前状态
+        // 备份当前状态
         System.out.println("备份当前状态");
         GameMemento gameMemento = game.createGameMemento();
 
