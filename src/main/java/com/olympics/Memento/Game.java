@@ -3,7 +3,7 @@ package com.olympics.Memento;
 /**
  * 游戏
  */
-@Data
+
 public class Game {
 
     /**
@@ -30,11 +30,16 @@ public class Game {
      * 恢复备份
      * @param gameMemento
      */
-    public void restore(GameMemento gameMemento){
-        this.playerStep = gameMemento.getPlayerStep();
-    }
 
 	public void setPlayerStep(int i) {
 	}
+
+	public String getPlayerStep() {
+		return null;
+	}
+
+    public void restore(GameMemento gameMemento){
+        this.playerStep = gameMemento.getPlayerStep();
+    }
 
 }
