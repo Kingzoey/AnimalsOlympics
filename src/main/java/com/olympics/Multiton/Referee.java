@@ -8,15 +8,15 @@ import java.util.Random;
 */
 
 public class Referee {
-	private static final int maxNumberOfReferee = 2;
-	private static ArrayList refereeInfoList = new ArrayList(maxNumberOfReferee);
-	private static ArrayList refereeList = new ArrayList(maxNumberOfReferee);
+	private static final int MAX = 2;
+	private static ArrayList refereeInfo = new ArrayList(MAX);
+	private static ArrayList refereeList = new ArrayList(MAX);
 	
 	private static int countNumofReferee = 0;
 	
 	static{
-		for(int i = 0; i < maxNumberOfReferee ; i++){
-			refereeList.add(new Referee("第"+i+"位裁判"));
+		for(int i = 0; i < MAX ; i++){
+			refereeList.add(new Referee("第" + i + "位裁判"));
 		}
 	}
 	
@@ -26,7 +26,7 @@ public class Referee {
 	}
 	
 	private Referee(String info){
-		refereeInfoList.add(info);
+		refereeInfo.add(info);
 	}
 	
 	public static Referee getInstance(int num){
@@ -43,14 +43,13 @@ public class Referee {
 	
 	  public static Referee getInstance(){  
 	        Random random=new Random();  
-	        countNumofReferee=random.nextInt(maxNumberOfReferee);  
+	        countNumofReferee=random.nextInt(MAX);  
 	        return (Referee)refereeList.get(countNumofReferee);  
 	  }  
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return (String) refereeInfoList.get(countNumofReferee);
+		return (String) refereeInfo.get(countNumofReferee);
 	}
 }
 

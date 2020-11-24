@@ -4,5 +4,4 @@ package com.olympics.Facade;
 public interface Cinema {
 	//看电影
 	void Watching();
-
 }

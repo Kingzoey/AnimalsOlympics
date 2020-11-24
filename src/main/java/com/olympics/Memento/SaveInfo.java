@@ -3,7 +3,7 @@ package com.olympics.Memento;
 /*
   备份信息
  */
-public class Caretaker {
+public class SaveInfo {
     // 备份 
     private GameMemento gameMemento;
     // 恢复备份 
