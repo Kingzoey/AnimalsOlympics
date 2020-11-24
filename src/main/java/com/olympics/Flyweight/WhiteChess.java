@@ -1,10 +1,8 @@
 package com.olympics.Flyweight;
 
-//白色棋子
+//白棋
 public class WhiteChess extends AbstractChess {
-    /**
-     * 构造方法 初始化白棋子
-     */
+    // 构造方法 初始化白棋子
     public WhiteChess() {
         super("○");
         System.out.println("白棋创建中 :-)");

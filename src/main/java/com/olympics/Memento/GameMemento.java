@@ -1,8 +1,7 @@
 package com.olympics.Memento;
 
-/*
- 备份
- */
+// 备份
+
 @Getter
 public class GameMemento {
     /**

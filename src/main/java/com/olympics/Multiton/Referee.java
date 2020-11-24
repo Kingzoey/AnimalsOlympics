@@ -9,17 +9,18 @@ import java.util.Random;
 
 public class Referee {
 	private static final int MAX = 2;
+	
+	// 动态数组存储裁判信息和列表
 	private static ArrayList refereeInfo = new ArrayList(MAX);
 	private static ArrayList refereeList = new ArrayList(MAX);
 	
-	private static int countNumofReferee = 0;
+	private static int count = 0;
 	
 	static{
 		for(int i = 0; i < MAX ; i++){
 			refereeList.add(new Referee("第" + i + "位裁判"));
 		}
 	}
-	
 	
 	private Referee(){
 		
@@ -30,26 +31,25 @@ public class Referee {
 	}
 	
 	public static Referee getInstance(int num){
-		countNumofReferee = num;
+		count = num;
 		if (num == 0) {
 			return (Referee) refereeList.get(0);
 		}else if(num == 1){
 			return (Referee) refereeList.get(1);
 		}else{
-			System.out.println("裁判过多！");
+			System.out.println("裁判数量已超过上限！");
 			return null;
 		}
 	}
 	
 	  public static Referee getInstance(){  
-	        Random random=new Random();  
-	        countNumofReferee=random.nextInt(MAX);  
-	        return (Referee)refereeList.get(countNumofReferee);  
+	        Random random = new Random();  
+	        count = random.nextInt(MAX);  
+	        return (Referee)refereeList.get(count);  
 	  }  
 	
 	@Override
 	public String toString() {
-		return (String) refereeInfo.get(countNumofReferee);
+		return (String) refereeInfo.get(count);
 	}
 }
-
