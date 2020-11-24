@@ -10,14 +10,16 @@ public class BasketballGame extends GameThread {
 
 
     public void gameStart() {
-        System.out.println("欢迎进入篮球比赛!组建你的球队，设置首发球员，然后输入 start 开始游戏！");
+        System.out.println("欢迎进入篮球比赛!组建你的球队，设置首发球员，然后开始游戏！");
         System.out.println("游戏过程中，可以使用以下按键达到对游戏的控制：");
         System.out.println("c:更换在场球员");
         System.out.println("t:更换球队战术");
         System.out.println("s:更改球员状态");
         System.out.println("a:恢复游戏(如果没有自动恢复游戏的话，解除以上暂停)");
+        System.out.println("输入任意字符开始游戏！");
+        String confirm = read.next();
         label:
-        while (true) {
+        while (!confirm.isEmpty()) {
             if (!game.isTeamMake) {
                 game.MakeTeam();
                 game.isTeamMake = true;
