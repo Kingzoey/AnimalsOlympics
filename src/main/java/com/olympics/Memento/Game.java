@@ -2,9 +2,7 @@ package com.olympics.Memento;
 
 public class Game {
 
-    /*
-      玩家走的步数
-     */
+    // 玩家走的步数
     private int playerStep;
 
     /**
@@ -15,9 +13,7 @@ public class Game {
         return new GameMemento(playerStep);
     }
 
-    /*
-      初始化
-     */
+    // 初始化  
     public void play(){
         playerStep = 0;
     }

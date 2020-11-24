@@ -28,7 +28,7 @@ public class ChessFactory {
         // 从缓存中获得棋子对象实例
         AbstractChess abstractChess = this.cache.get(c);
         if (abstractChess == null) {
-            // 缓存中没有棋子对象实例信息 则创建棋子对象实例 并放入缓存
+            // 缓存中没有棋子对象实例信息，则创建棋子对象实例并放入缓存
             switch (c) {
                 case 'B':
                     abstractChess = new BlackChess();
@@ -45,7 +45,7 @@ public class ChessFactory {
                 this.cache.put(c, abstractChess);
             }
         }
-        // 如果缓存中存在 棋子对象则直接返回
+        // 如果缓存中存在棋子对象则直接返回
         return abstractChess;
     }
 }

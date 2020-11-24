@@ -23,5 +23,4 @@ public class Market {
 	{
 		waiter.Watching();
 	}
-
 }
