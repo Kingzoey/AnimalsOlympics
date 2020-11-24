@@ -2,9 +2,9 @@ package com.olympics.BasketballScene;
 
 import com.olympics.Proxy.StarterPlayer;
 import com.olympics.Proxy.SubstitutePlayer;
-import com.olympics.Strategy.CallTactics;
 import com.olympics.StaticFactory.BasketballPlayer;
 import com.olympics.StaticFactory.PlayerTraining;
+import com.olympics.Strategy.CallTactics;
 
 import java.util.Scanner;
 
@@ -36,20 +36,30 @@ public class GameThread implements Runnable {
         */
         int i = 0;
         System.out.println("球队组建，球员信息录入：");
-        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出）：");
+        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出，输入x使用默认数据）：");
         System.out.println("三个位置为：Center(中锋),Guard(后卫),Forward(前锋)");
         while (i < 12) {
             String name = read.next();
-            if (!name.equals("0")) {
+            if (name.equals("0")) {
+                System.out.println("退出球员组建，👋👋！");
+                break;
+            } else if(name.equals("x"))  {
+                String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
+                int[] ages = {36,32,35,26,39,32,29,25};
+                int[] numbers = {23,13,3,6,11,330,2,32};
+                String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
+                for(int m = 0;m < names.length;m++) {
+                    BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
+                    players[m] = player;
+                }
+                break;
+            } else {
                 int age = read.nextInt();
                 int number = read.nextInt();
                 String position = read.next();
                 BasketballPlayer player = PlayerTraining.trainPlayer(name, age, number, position);
                 players[i] = player;
                 i++;
-            } else {
-                System.out.println("退出球员组建，👋👋！");
-                break;
             }
         }
         System.out.println("组建球队成功！");
@@ -64,8 +74,19 @@ public class GameThread implements Runnable {
          * 确立首发球员
          */
         int i = 0;
-        System.out.println("确立首发球员5人，请输入首发球员的号码:");
+        System.out.println("确立首发球员5人:");
+        System.out.println("如果使用默认数据，请输入 x ，否则输入 a ");
+        String choice = read.next();
+        if (choice.equals("x")) {
+            for(int m = 0;m < 5;m++) {
+                players[m].isStarter = true;
+                players[m].isOnCourt = true;
+            }
+            showPlayers(players);
+            return;
+        } 
         boolean isFind = false;
+        System.out.println("请输入首发球员的号码:");
         for (i = 0; i < 5; ) {
             int number = read.nextInt();
             for (BasketballPlayer basketballPlayer : players) {

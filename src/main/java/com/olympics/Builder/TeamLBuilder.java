@@ -1,29 +1,29 @@
 package com.olympics.Builder;
 
-public class ConcreteBuilder implements ITeamBuilder
+public class TeamLBuilder implements ITeamBuilder
 {
-    Team team;
+    Team teaml;
 
-    public ConcreteBuilder()
+    public TeamLBuilder()
     {
-        team = new Team();
+        teaml = new Team();
     }
 
     @Override
     public void buildPlayer1()
     {
-        team.setPlayer1("狮子");
+        teaml.setPlayer1("狮子");
     }
 
     @Override
     public void buildPlayer2()
     {
-        team.setPlayer2("老虎");
+        teaml.setPlayer2("大象");
     }
     
     @Override
     public Team buildTeam()
     {
-        return this.team;
+        return this.teaml;
     }
 }

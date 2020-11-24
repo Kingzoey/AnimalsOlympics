@@ -1,11 +1,9 @@
 package com.olympics.Flyweight;
 
-//黑色棋子类
-public class BlackChessman extends AbstractChessman {
-    /**
-     * 构造方法 初始化黑棋子
-     */
-    public BlackChessman() {
+//黑棋
+public class BlackChess extends AbstractChess {
+    // 初始化黑棋子
+    public BlackChess() {
         super("●");
         System.out.println("黑棋创建中 :-)");
     }

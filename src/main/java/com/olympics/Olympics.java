@@ -1,28 +1,64 @@
 package com.olympics;
 
+import com.olympics.BasketballScene.BasketballSceneDemo;
+import com.olympics.ChainOfResponsibility.HandlerChain;
+import com.olympics.DependencyInjection.DependencyInjection;
+import com.olympics.Visitor.ObjectStructure;
+import com.olympics.Visitor.Visitor;
+
 public class Olympics {
-    private static int index = 1;
-    public static String test(String name){
-        return index++ + ". " + name;
+    public static String mkTestName(String patternName) {
+        return "------现在开始测试" + patternName + "------";
     }
+
     public static void main(String[] args) {
         System.out.println("动物运动会测试");
 
-        System.out.println(test("多例模式"));
+        System.out.println(mkTestName("多例模式"));
         // 在这里添加该模式的测试代码
+
+        System.out.println(mkTestName("外观模式"));
+
+        System.out.println(mkTestName("享元模式"));
+
+        System.out.println(mkTestName("备忘录模式"));
+
+        System.out.println(mkTestName("模板模式"));
+
+        System.out.println(mkTestName("单例模式"));
+
+        System.out.println(mkTestName("观察者模式"));
+
+        System.out.println(mkTestName("桥接模式"));
+
+        System.out.println(mkTestName("规格模式"));
+
+        System.out.println(mkTestName("观察者模式"));
+
+        System.out.println(mkTestName("流接口模式"));
         
-        System.out.println(test("外观模式"));
+        System.out.println(mkTestName("工厂模式"));
+
+        System.out.println(mkTestName("抽象工厂模式"));
+
+        System.out.println(mkTestName("组合模式"));
+
+        System.out.println(mkTestName("解释器模式"));
+
+        System.out.println(mkTestName("依赖注入模式"));
+        DependencyInjection.main(null);
         
-        System.out.println(test("享元模式"));
+        System.out.println(mkTestName("责任链模式"));
+        HandlerChain.main(null);
+
+        System.out.println(mkTestName("访问者模式"));
+        ObjectStructure.main(null);
+
+        System.out.println(mkTestName("静态工厂模式, 状态模式, 代理模式, 策略模式"));
+        BasketballSceneDemo.main(null);
+
+        System.out.println(mkTestName("建造者模式"));
         
-        System.out.println(test("备忘录模式"));
-        
-        System.out.println(test("模板模式"));
-        
-        System.out.println(test("单例模式"));
-        
-        System.out.println(test("观察者模式"));
-        
-        System.out.println(test("桥接模式"));
+        // ...
     }
 }

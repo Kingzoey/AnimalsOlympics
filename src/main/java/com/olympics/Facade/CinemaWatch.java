@@ -1,11 +1,9 @@
 package com.olympics.Facade;
 
-//电影院
+//影院
 public class CinemaWatch implements Cinema{
-
 	@Override
 	public void Watching() {
-		System.out.println(this.getClass() + " : " + "Watching" + " : " + "Cinema watching");	
+		System.out.println(this.getClass() + " : " + "看电影" + " - " + "影院观影中");	
 	}
-
 }
