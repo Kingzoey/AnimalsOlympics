@@ -5,7 +5,7 @@ public class ShelvesBuy implements Shelves{
 
 	@Override
 	public void Buying() {
-		System.out.println(this.getClass() + " : " + "Buying" + " : " + "Shelves buying");
+		System.out.println(this.getClass() + " : " + "买商品" + " : " + "货架购物中");
 		
 	}
 
