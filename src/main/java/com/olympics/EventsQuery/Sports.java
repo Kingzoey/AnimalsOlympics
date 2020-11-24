@@ -2,17 +2,20 @@ package com.olympics.EventsQuery;
 
 public class Sports {
     String name;
+    int num;
     String place;
     String date;
 
     public void showPlaceof(String name) {
         this.name = name;
-        System.out.println(this.name + "项目的地点在" + this.place);
+        this.num ++;
+        System.out.println(this.name + " 项目的地点在 " + this.place);
     }
 
     public void showDateof(String name) {
         this.name = name;
-        System.out.println(this.name + "项目的日期是" + this.date);
+        this.num ++;
+        System.out.println(this.name + " 项目的日期是 " + this.date);
     }
 
     public static void main(String[] args) {
@@ -49,6 +52,11 @@ public class Sports {
 
         running.showPlaceof("跑步");
         swimming.showDateof("游泳");
+        swimming.showDateof("游泳");
+        hurdle.showDateof(" 跨栏");
+        System.out.println(swimming.num);
+        System.out.println(running.num);
+        System.out.println(hurdle.num);
 
     }
 }

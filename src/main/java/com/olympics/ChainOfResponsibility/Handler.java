@@ -6,5 +6,5 @@ public interface Handler {
      * @param segment 
      * @return 花费时间
      */
-    Double process(Segment segment);
+    float process(Segment segment);
 }

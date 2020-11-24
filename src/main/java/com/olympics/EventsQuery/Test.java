@@ -19,8 +19,8 @@ public class Test {
                 System.out.println(obj);
             }
         }
-            System.out.println("日期为2020.08.18且地点为篮球场的比赛项目为篮球");
-            System.out.println("日期为2020.08.17且地点为足球场的比赛项目为足球");
+            System.out.println("日期为 2020.08.18 且地点为 篮球场 的比赛项目为 篮球");
+            System.out.println("日期为 2020.08.17 且地点为 足球场 的比赛项目为 足球");
             
     }
 }
