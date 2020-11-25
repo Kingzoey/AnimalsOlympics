@@ -5,6 +5,7 @@ target/
 # IDEA
 
 .idea
+AnimalsOlympics.iml
 
 # vscode
 .vscode
