@@ -7,5 +7,9 @@ public class MultitionTest {
 		mReferee = Referee.getInstance(1);
 		System.out.println(mReferee.toString());
 		mReferee = Referee.getInstance(2);
+		System.out.println(mReferee.toString());
+		mReferee = Referee.getInstance(3);
+		System.out.println(mReferee.toString());
+		mReferee = Referee.getInstance(4);
 	}
 }

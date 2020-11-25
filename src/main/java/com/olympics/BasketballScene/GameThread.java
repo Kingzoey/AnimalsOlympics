@@ -35,8 +35,8 @@ public class GameThread implements Runnable {
         0
         */
         int i = 0;
-        System.out.println("球队组建，球员信息录入：");
-        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出，输入x使用默认数据）：");
+        System.out.println("球队组建，球员信息录入:");
+        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出，输入x使用默认数据）:");
         System.out.println("三个位置为：Center(中锋),Guard(后卫),Forward(前锋)");
         while (i < 12) {
             String name = read.next();
@@ -46,7 +46,7 @@ public class GameThread implements Runnable {
             } else if(name.equals("x"))  {
                 String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
                 int[] ages = {36,32,35,26,39,32,29,25};
-                int[] numbers = {23,13,3,6,11,330,2,32};
+                int[] numbers = {23,13,3,6,11,30,2,32};
                 String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
                 for(int m = 0;m < names.length;m++) {
                     BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
@@ -65,7 +65,21 @@ public class GameThread implements Runnable {
         System.out.println("组建球队成功！");
         showPlayers(players);
     }
-
+    
+    protected void MakeTeam(Boolean auto) {
+        System.out.println();
+        System.out.println("组建球队测试ing……");
+        String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
+        int[] ages = {36,32,35,26,39,32,29,25};
+        int[] numbers = {23,13,3,6,11,30,2,32};
+        String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
+        for(int m = 0;m < names.length;m++) {
+            BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
+            players[m] = player;
+        }
+        System.out.println("组建球队完成！");
+        showPlayers(players);
+    }
     /**
      * 设置首发球员
      */
@@ -108,6 +122,16 @@ public class GameThread implements Runnable {
         showPlayers(players);
     }
 
+    protected void SetPlayerStarted(Boolean auto) {
+        System.out.println();
+        System.out.println("设置首发球员ing……");
+        for(int m = 0;m < 5;m++) {
+            players[m].isStarter = true;
+            players[m].isOnCourt = true;
+        }
+        System.out.println("设置首发球员测试完成！");
+        showPlayers(players);
+    }
     /**
      * 呼叫暂停，更改球员状态——状态模式
      */
@@ -116,9 +140,9 @@ public class GameThread implements Runnable {
          * 球员状态测试，生成时默认为正常状态——状态模式
          */
         System.out.println("每场比赛，球员的状态会起伏不定");
-        System.out.println("便于测试，直观体现，你可以手动改变球员状态：");
+        System.out.println("便于测试，直观体现，你可以手动改变球员状态:");
         System.out.println("1.失常状态\t2.超常状态\t3.正常状态\t(两两状态之间转化不同) q.退出");
-        System.out.println("请输入你要改变状态的球员的号码和状态编号：");
+        System.out.println("请输入你要改变状态的球员的号码和状态编号:");
         while (true) {
             String playerNum = read.next();
             if (playerNum.equals("q")) {
@@ -147,19 +171,35 @@ public class GameThread implements Runnable {
                 showPlayers(players);
             }
         }
-
+    }
+    protected void PlayerStateChange(Boolean auto) {
+        System.out.println();
+        System.out.println("自动测试球员状态更换ing……");
+        players[1].playerStateChange.abnormal();
+        showPlayers(players[1]);
+        System.out.println();
+        players[2].playerStateChange.superNormal();
+        showPlayers(players[2]);
+        System.out.println();
+        players[3].playerStateChange.normal();
+        showPlayers(players[3]);
+        System.out.println();
+        players[1].playerStateChange.superNormal();
+        showPlayers(players[1]);
+        System.out.println();
+        System.out.println("球员状态更换测试完成");
     }
 
-    /**
-     * 呼叫暂停，进入更换球员函数——代理模式
-     */
+        /**
+         * 呼叫暂停，进入更换球员函数——代理模式
+         */
     protected void ChangePlayerOnCourt() {
         /**
          * 球员更换——代理模式
          */
         System.out.println("更换球员测试");
         while (true) {
-            System.out.println("请输入被替换球员的号码：");
+            System.out.println("请输入被替换球员的号码:");
             String choice = read.next();
             if (!isLegal(choice)) {
                 System.out.println("请输入合法数字！");
@@ -167,7 +207,7 @@ public class GameThread implements Runnable {
                 System.out.println("退出球员更换！");
                 break;
             } else {
-                System.out.println("请输入要上场的球员号码：");
+                System.out.println("请输入要上场的球员号码:");
                 String subNum = read.next();
                 BasketballPlayer nowPlayer = find(players, choice);
                 BasketballPlayer nextPlayer = find(players, subNum);
@@ -182,6 +222,21 @@ public class GameThread implements Runnable {
         }
         showPlayers(players);
     }
+    
+    protected void ChangePlayerOnCourt(Boolean auto) {
+        System.out.println();
+        System.out.println("自动测试替换球员ing……");
+        String[] nowPlayers = {"23","3","11"};
+        String[] nextPlayers = {"2","30","32"};
+        for (int m = 0;m < 3;m++) {
+            BasketballPlayer nowPlayer = find(players, nowPlayers[m]);
+            BasketballPlayer nextPlayer = find(players, nextPlayers[m]);
+            SubstitutePlayer subPlayer = new SubstitutePlayer(nowPlayer,nextPlayer);
+            subPlayer.play();
+        }
+        System.out.println("自动替换测试完成！现在球员情况:");
+        showPlayers(players);
+    }
 
     /**
      * 呼叫暂停，进入战术选择函数——策略模式
@@ -190,7 +245,7 @@ public class GameThread implements Runnable {
         /**
          * 战术选择测试——策略模式
          */
-        System.out.println("进入战术选择模式：");
+        System.out.println("进入战术选择模式:");
         System.out.println("1.进攻战术：普林斯顿    防守战术：半场紧逼 ");
         System.out.println("2.进攻战术：跑   轰    防守战术：3-2联防 ");
         System.out.println("3.进攻战术：单   打    防守战术：包   夹 ");
@@ -215,12 +270,24 @@ public class GameThread implements Runnable {
         showPlayers(players);
     }
 
-    /**
-     * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
-     *
-     * @param s
-     * @return 输入有字符则染回false，纯数字返回true
-     */
+    protected void ChangeTactics(Boolean auto) {
+        System.out.println();
+        System.out.println("自动使用战术测试ing……");
+        for (int m = 1;m < 4 ;m++) {
+            CallTactics tactics = new CallTactics(m);
+            tactics.executeTactic(players);
+            System.out.println();
+        }
+        System.out.println("多次战术使用后，球员属性变化:");
+        showPlayers(players);
+    }
+
+        /**
+         * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
+         *
+         * @param s
+         * @return 输入有字符则染回false，纯数字返回true
+         */
     public boolean isLegal(String s) {
         for (int i = 0; i < s.length(); i++) {
             if (!Character.isDigit(s.charAt(i))) {
@@ -235,7 +302,7 @@ public class GameThread implements Runnable {
      * @description: 输出球员信息
      */
     public void showPlayers(BasketballPlayer[] basketballPlayers) {
-        System.out.println("当前球员信息如下：");
+        System.out.println("当前球员信息如下:");
         System.out.println("Name\tage\tNumber\tPosition\tAttack\tDefense\tISONCOURT\tISSTART\t");
         for (BasketballPlayer basketballPlayer : basketballPlayers) {
             if (basketballPlayer != null) {
@@ -245,13 +312,18 @@ public class GameThread implements Runnable {
             }
         }
     }
+    public void showPlayers(BasketballPlayer basketballPlayer) {
+        System.out.println("球员:" + basketballPlayer.name + "当前信息如下:");
+        System.out.println(basketballPlayer.position + "\t\t" + basketballPlayer.stateAttackAbility + "\t" + basketballPlayer.stateDefenseAbility + "\t"
+            + basketballPlayer.isOnCourt + "\t\t" + basketballPlayer.isStarter + "\t");
+    }
 
-    /**
-     * @param players
-     * @param search
-     * @return BasketballPlayer
-     * @description: 根据姓名或号码搜索球员
-     */
+        /**
+         * @param players
+         * @param search
+         * @return BasketballPlayer
+         * @description: 根据姓名或号码搜索球员
+         */
     public BasketballPlayer find(BasketballPlayer[] players, String search) {
         if (isLegal(search)) {
             int num = Integer.parseInt(search);

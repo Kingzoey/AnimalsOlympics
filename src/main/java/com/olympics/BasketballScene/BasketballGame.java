@@ -10,16 +10,27 @@ public class BasketballGame extends GameThread {
 
 
     public void gameStart() {
-        System.out.println("欢迎进入篮球比赛!组建你的球队，设置首发球员，然后开始游戏！");
+        System.out.println("欢迎进入篮球比赛!组建你的球队<静态工厂模式>，设置首发球员，然后开始游戏！");
         System.out.println("游戏过程中，可以使用以下按键达到对游戏的控制：");
-        System.out.println("c:更换在场球员");
-        System.out.println("t:更换球队战术");
-        System.out.println("s:更改球员状态");
+        System.out.println("c:更换在场球员 <代理模式>");
+        System.out.println("t:更换球队战术 <策略模式>");
+        System.out.println("s:更改球员状态 <状态模式>");
         System.out.println("a:恢复游戏(如果没有自动恢复游戏的话，解除以上暂停)");
-        System.out.println("输入任意字符开始游戏！");
+        System.out.println("q:退出游戏");
+        System.out.println("Tips:输入1可以进行自动测试，输入2可以手动测试并体验游戏~");
         String confirm = read.next();
         label:
         while (!confirm.isEmpty()) {
+            if (confirm.equals("1")) {
+                game.MakeTeam(true);
+                game.SetPlayerStarted(true);
+                game.ChangePlayerOnCourt(true);
+                game.ChangeTactics(true);
+                game.PlayerStateChange(true);
+                System.out.println("自动测试：游戏进行中……");
+                System.out.println("自动测试完成！");
+                return;
+            }
             if (!game.isTeamMake) {
                 game.MakeTeam();
                 game.isTeamMake = true;
@@ -60,6 +71,5 @@ public class BasketballGame extends GameThread {
             }
         }
         System.out.println("比赛结束");
-
     }
 }
