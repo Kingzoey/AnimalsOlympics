@@ -121,6 +121,7 @@ public class GameThread implements Runnable {
     }
 
     protected void SetPlayerStarted(Boolean auto) {
+        System.out.println("设置首发球员ing……");
         for(int m = 0;m < 5;m++) {
             players[m].isStarter = true;
             players[m].isOnCourt = true;

@@ -24,6 +24,7 @@ public class BasketballGame extends GameThread {
             if (confirm.equals("1")) {
                 game.MakeTeam(true);
                 game.SetPlayerStarted(true);
+                game.ChangePlayerOnCourt(true);
                 break label;
             }
             if (!game.isTeamMake) {
@@ -66,6 +67,5 @@ public class BasketballGame extends GameThread {
             }
         }
         System.out.println("比赛结束");
-
     }
 }
