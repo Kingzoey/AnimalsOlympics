@@ -1,10 +1,18 @@
 package com.olympics.EventsQuery;
 
 public class Sports {
-    String name;
+    private String name;
     int num;
     String place;
     String date;
+    
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public String getName(String name){
+        return this.name;
+    }
 
     public void showPlaceof(String name) {
         this.name = name;
