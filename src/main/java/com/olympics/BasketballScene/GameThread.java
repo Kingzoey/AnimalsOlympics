@@ -201,6 +201,19 @@ public class GameThread implements Runnable {
         }
         showPlayers(players);
     }
+    
+    protected void ChangePlayerOnCourt(Boolean auto) {
+        String[] nowPlayers = {"23","3","11"};
+        String[] nextPlayers = {"2","30","32"};
+        for (int m = 0;m < 3;m++) {
+            BasketballPlayer nowPlayer = find(players, nowPlayers[m]);
+            BasketballPlayer nextPlayer = find(players, nextPlayers[m]);
+            SubstitutePlayer subPlayer = new SubstitutePlayer(nowPlayer,nextPlayer);
+            subPlayer.play();
+        }
+        System.out.println("自动替换测试完成！现在球员情况：");
+        showPlayers(players);
+    }
 
     /**
      * 呼叫暂停，进入战术选择函数——策略模式
