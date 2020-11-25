@@ -35,8 +35,8 @@ public class GameThread implements Runnable {
         0
         */
         int i = 0;
-        System.out.println("球队组建，球员信息录入：");
-        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出，输入x使用默认数据）：");
+        System.out.println("球队组建，球员信息录入:");
+        System.out.println("请依次输入球员姓名、年龄、球衣号码、位置（以空号间隔，输入0退出，输入x使用默认数据）:");
         System.out.println("三个位置为：Center(中锋),Guard(后卫),Forward(前锋)");
         while (i < 12) {
             String name = read.next();
@@ -140,9 +140,9 @@ public class GameThread implements Runnable {
          * 球员状态测试，生成时默认为正常状态——状态模式
          */
         System.out.println("每场比赛，球员的状态会起伏不定");
-        System.out.println("便于测试，直观体现，你可以手动改变球员状态：");
+        System.out.println("便于测试，直观体现，你可以手动改变球员状态:");
         System.out.println("1.失常状态\t2.超常状态\t3.正常状态\t(两两状态之间转化不同) q.退出");
-        System.out.println("请输入你要改变状态的球员的号码和状态编号：");
+        System.out.println("请输入你要改变状态的球员的号码和状态编号:");
         while (true) {
             String playerNum = read.next();
             if (playerNum.equals("q")) {
@@ -177,12 +177,16 @@ public class GameThread implements Runnable {
         System.out.println("自动测试球员状态更换ing……");
         players[1].playerStateChange.abnormal();
         showPlayers(players[1]);
+        System.out.println();
         players[2].playerStateChange.superNormal();
         showPlayers(players[2]);
+        System.out.println();
         players[3].playerStateChange.normal();
         showPlayers(players[3]);
+        System.out.println();
         players[1].playerStateChange.superNormal();
         showPlayers(players[1]);
+        System.out.println();
         System.out.println("球员状态更换测试完成");
     }
 
@@ -195,7 +199,7 @@ public class GameThread implements Runnable {
          */
         System.out.println("更换球员测试");
         while (true) {
-            System.out.println("请输入被替换球员的号码：");
+            System.out.println("请输入被替换球员的号码:");
             String choice = read.next();
             if (!isLegal(choice)) {
                 System.out.println("请输入合法数字！");
@@ -203,7 +207,7 @@ public class GameThread implements Runnable {
                 System.out.println("退出球员更换！");
                 break;
             } else {
-                System.out.println("请输入要上场的球员号码：");
+                System.out.println("请输入要上场的球员号码:");
                 String subNum = read.next();
                 BasketballPlayer nowPlayer = find(players, choice);
                 BasketballPlayer nextPlayer = find(players, subNum);
@@ -230,7 +234,7 @@ public class GameThread implements Runnable {
             SubstitutePlayer subPlayer = new SubstitutePlayer(nowPlayer,nextPlayer);
             subPlayer.play();
         }
-        System.out.println("自动替换测试完成！现在球员情况：");
+        System.out.println("自动替换测试完成！现在球员情况:");
         showPlayers(players);
     }
 
@@ -241,7 +245,7 @@ public class GameThread implements Runnable {
         /**
          * 战术选择测试——策略模式
          */
-        System.out.println("进入战术选择模式：");
+        System.out.println("进入战术选择模式:");
         System.out.println("1.进攻战术：普林斯顿    防守战术：半场紧逼 ");
         System.out.println("2.进攻战术：跑   轰    防守战术：3-2联防 ");
         System.out.println("3.进攻战术：单   打    防守战术：包   夹 ");
@@ -274,7 +278,7 @@ public class GameThread implements Runnable {
             tactics.executeTactic(players);
             System.out.println();
         }
-        System.out.println("多次战术使用后，球员属性变化：");
+        System.out.println("多次战术使用后，球员属性变化:");
         showPlayers(players);
     }
 
@@ -298,7 +302,7 @@ public class GameThread implements Runnable {
      * @description: 输出球员信息
      */
     public void showPlayers(BasketballPlayer[] basketballPlayers) {
-        System.out.println("当前球员信息如下：");
+        System.out.println("当前球员信息如下:");
         System.out.println("Name\tage\tNumber\tPosition\tAttack\tDefense\tISONCOURT\tISSTART\t");
         for (BasketballPlayer basketballPlayer : basketballPlayers) {
             if (basketballPlayer != null) {
@@ -309,7 +313,7 @@ public class GameThread implements Runnable {
         }
     }
     public void showPlayers(BasketballPlayer basketballPlayer) {
-        System.out.println("球员：" + basketballPlayer.name + "当前信息如下：");
+        System.out.println("球员:" + basketballPlayer.name + "当前信息如下:");
         System.out.println(basketballPlayer.position + "\t\t" + basketballPlayer.stateAttackAbility + "\t" + basketballPlayer.stateDefenseAbility + "\t"
             + basketballPlayer.isOnCourt + "\t\t" + basketballPlayer.isStarter + "\t");
     }

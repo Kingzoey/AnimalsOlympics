@@ -26,7 +26,10 @@ public class BasketballGame extends GameThread {
                 game.SetPlayerStarted(true);
                 game.ChangePlayerOnCourt(true);
                 game.ChangeTactics(true);
-                break label;
+                game.PlayerStateChange(true);
+                System.out.println("自动测试：游戏进行中……");
+                System.out.println("自动测试完成！");
+                return;
             }
             if (!game.isTeamMake) {
                 game.MakeTeam();
