@@ -46,7 +46,7 @@ public class GameThread implements Runnable {
             } else if(name.equals("x"))  {
                 String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
                 int[] ages = {36,32,35,26,39,32,29,25};
-                int[] numbers = {23,13,3,6,11,330,2,32};
+                int[] numbers = {23,13,3,6,11,30,2,32};
                 String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
                 for(int m = 0;m < names.length;m++) {
                     BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
