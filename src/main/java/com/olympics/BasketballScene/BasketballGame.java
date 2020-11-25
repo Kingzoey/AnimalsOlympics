@@ -25,6 +25,7 @@ public class BasketballGame extends GameThread {
                 game.MakeTeam(true);
                 game.SetPlayerStarted(true);
                 game.ChangePlayerOnCourt(true);
+                game.ChangeTactics(true);
                 break label;
             }
             if (!game.isTeamMake) {
