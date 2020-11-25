@@ -1,5 +1,8 @@
 package com.olympics.Memento;
 
+import lombok.Data;
+
+@Data
 public class Game {
 
     // 对局步数
@@ -23,15 +26,17 @@ public class Game {
      * @param gameMemento
      */
 
+     /*
 	public void setPlayerStep(int i) {
 	}
 
-	public String getPlayerStep() {
-		return null;
-	}
+	public int getPlayerStep() {
+		return playerStep;
+    }
+    */
 
     public void restore(GameMemento gameMemento){
-        this.playerStep = gameMemento.getPlayerStep();
+        this.playerStep = gameMemento.getPlayerSteps();
     }
 
 }
