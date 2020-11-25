@@ -67,7 +67,8 @@ public class GameThread implements Runnable {
     }
     
     protected void MakeTeam(Boolean auto) {
-        System.out.println("组建球队成功！");
+        System.out.println();
+        System.out.println("组建球队测试ing……");
         String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
         int[] ages = {36,32,35,26,39,32,29,25};
         int[] numbers = {23,13,3,6,11,30,2,32};
@@ -76,6 +77,7 @@ public class GameThread implements Runnable {
             BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
             players[m] = player;
         }
+        System.out.println("组建球队完成！");
         showPlayers(players);
     }
     /**
@@ -121,11 +123,13 @@ public class GameThread implements Runnable {
     }
 
     protected void SetPlayerStarted(Boolean auto) {
+        System.out.println();
         System.out.println("设置首发球员ing……");
         for(int m = 0;m < 5;m++) {
             players[m].isStarter = true;
             players[m].isOnCourt = true;
         }
+        System.out.println("设置首发球员测试完成！");
         showPlayers(players);
     }
     /**
@@ -204,6 +208,8 @@ public class GameThread implements Runnable {
     }
     
     protected void ChangePlayerOnCourt(Boolean auto) {
+        System.out.println();
+        System.out.println("自动测试替换球员ing……");
         String[] nowPlayers = {"23","3","11"};
         String[] nextPlayers = {"2","30","32"};
         for (int m = 0;m < 3;m++) {
@@ -248,12 +254,24 @@ public class GameThread implements Runnable {
         showPlayers(players);
     }
 
-    /**
-     * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
-     *
-     * @param s
-     * @return 输入有字符则染回false，纯数字返回true
-     */
+    protected void ChangeTactics(Boolean auto) {
+        System.out.println();
+        System.out.println("自动使用战术测试ing……");
+        for (int m = 1;m < 4 ;m++) {
+            CallTactics tactics = new CallTactics(m);
+            tactics.executeTactic(players);
+            System.out.println();
+        }
+        System.out.println("多次战术使用后，球员属性变化：");
+        showPlayers(players);
+    }
+
+        /**
+         * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
+         *
+         * @param s
+         * @return 输入有字符则染回false，纯数字返回true
+         */
     public boolean isLegal(String s) {
         for (int i = 0; i < s.length(); i++) {
             if (!Character.isDigit(s.charAt(i))) {
