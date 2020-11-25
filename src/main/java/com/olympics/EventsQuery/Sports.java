@@ -3,8 +3,8 @@ package com.olympics.EventsQuery;
 public class Sports {
     private String name;
     int num;
-    String place;
-    String date;
+    private String place;
+    private String date;
     
     public void setName(String name){
         this.name = name;
@@ -12,6 +12,22 @@ public class Sports {
     
     public String getName(String name){
         return this.name;
+    }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public String getDate(String date){
+        return this.date;
+    }
+
+    public void setPlace(String place){
+        this.place = place;
+    }
+
+    public String getPlace(String place){
+        return this.place;
     }
 
     public void showPlaceof(String name) {
@@ -30,31 +46,31 @@ public class Sports {
 
         Sports running = new Sports();
         running.date = "2020.08.20";
-        running.place = "操场";
+        running.setPlace("操场");
 
         Sports swimming = new Sports();
         swimming.date = "2020.08.19";
-        swimming.place = "泳池";
+        swimming.setPlace("泳池");
 
         Sports basketball = new Sports();
         basketball.date = "2020.08.18";
-        basketball.place = "篮球场";
+        basketball.setPlace("篮球场");
 
         Sports football = new Sports();
         football.date = "2020.08.17";
-        football.place = "足球场";
-
+        football.setPlace("足球场");
+        
         Sports fencing = new Sports();
         fencing.date = "2020.08.14";
-        fencing.place = "击剑馆";
+        fencing.setPlace("击剑馆");
 
         Sports badminton = new Sports();
         badminton.date = "2020.11.11";
-        badminton.place = "羽毛球馆";
+        badminton.setPlace("羽毛球馆");
         
         Sports hurdle = new Sports();
         hurdle.date = "2020.12.02";
-        hurdle.place = "操场";
+        hurdle.setPlace("操场");
         
         
 
@@ -62,9 +78,9 @@ public class Sports {
         swimming.showDateof("游泳");
         swimming.showDateof("游泳");
         hurdle.showDateof(" 跨栏");
-        System.out.println(swimming.num);
-        System.out.println(running.num);
-        System.out.println(hurdle.num);
+        System.out.println("游泳项目被查询过"+swimming.num+"次");
+        System.out.println("跑步项目被查询过"+running.num+"次");
+        System.out.println("跨栏项目被查询过"+hurdle.num+"次");
 
     }
 }
