@@ -171,12 +171,24 @@ public class GameThread implements Runnable {
                 showPlayers(players);
             }
         }
-
+    }
+    protected void PlayerStateChange(Boolean auto) {
+        System.out.println();
+        System.out.println("自动测试球员状态更换ing……");
+        players[1].playerStateChange.abnormal();
+        showPlayers(players[1]);
+        players[2].playerStateChange.superNormal();
+        showPlayers(players[2]);
+        players[3].playerStateChange.normal();
+        showPlayers(players[3]);
+        players[1].playerStateChange.superNormal();
+        showPlayers(players[1]);
+        System.out.println("球员状态更换测试完成");
     }
 
-    /**
-     * 呼叫暂停，进入更换球员函数——代理模式
-     */
+        /**
+         * 呼叫暂停，进入更换球员函数——代理模式
+         */
     protected void ChangePlayerOnCourt() {
         /**
          * 球员更换——代理模式
@@ -296,13 +308,18 @@ public class GameThread implements Runnable {
             }
         }
     }
+    public void showPlayers(BasketballPlayer basketballPlayer) {
+        System.out.println("球员：" + basketballPlayer.name + "当前信息如下：");
+        System.out.println(basketballPlayer.position + "\t\t" + basketballPlayer.stateAttackAbility + "\t" + basketballPlayer.stateDefenseAbility + "\t"
+            + basketballPlayer.isOnCourt + "\t\t" + basketballPlayer.isStarter + "\t");
+    }
 
-    /**
-     * @param players
-     * @param search
-     * @return BasketballPlayer
-     * @description: 根据姓名或号码搜索球员
-     */
+        /**
+         * @param players
+         * @param search
+         * @return BasketballPlayer
+         * @description: 根据姓名或号码搜索球员
+         */
     public BasketballPlayer find(BasketballPlayer[] players, String search) {
         if (isLegal(search)) {
             int num = Integer.parseInt(search);
