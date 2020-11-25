@@ -2,9 +2,9 @@ package com.olympics.Facade;
 
 //商场
 public class Market {
-	private Restaurant restaurant=new RestaurantEat();
-	private Shelves shelves=new ShelvesBuy();
-	private Cinema waiter=new CinemaWatch();
+	private Restaurant restaurant = new RestaurantEat();
+	private Shelves shelves = new ShelvesBuy();
+	private Cinema cinema = new CinemaWatch();
 	
 	//吃东西
 	public void Eating()
@@ -21,6 +21,6 @@ public class Market {
 	//看电影
 	public void Watching()
 	{
-		waiter.Watching();
+		cinema.Watching();
 	}
 }

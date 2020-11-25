@@ -2,7 +2,7 @@ package com.olympics.Flyweight;
 
 import java.util.Random;
 
-//测试类
+// 测试类
 public class ChessTest {
     public static void main(String[] args) {
         // 创建棋类工厂
@@ -10,6 +10,8 @@ public class ChessTest {
         Random random = new Random();
         int radom = 0;
         AbstractChess abstractChess = null;
+        System.out.println("棋类建造--享元模式模拟--1");
+        System.out.println("随机获得棋子");
         // 随机获得棋子
         for (int i = 0; i < 10; i++) {
             radom = random.nextInt(2);
