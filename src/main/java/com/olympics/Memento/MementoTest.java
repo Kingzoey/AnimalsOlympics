@@ -1,6 +1,6 @@
 package com.olympics.Memento;
 
-public class Player {
+public class MementoTest {
 
     public static void main(String[] args) {
 
