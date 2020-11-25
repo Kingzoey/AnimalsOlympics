@@ -65,7 +65,19 @@ public class GameThread implements Runnable {
         System.out.println("组建球队成功！");
         showPlayers(players);
     }
-
+    
+    protected void MakeTeam(Boolean auto) {
+        System.out.println("组建球队成功！");
+        String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
+        int[] ages = {36,32,35,26,39,32,29,25};
+        int[] numbers = {23,13,3,6,11,30,2,32};
+        String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
+        for(int m = 0;m < names.length;m++) {
+            BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
+            players[m] = player;
+        }
+        showPlayers(players);
+    }
     /**
      * 设置首发球员
      */
@@ -108,6 +120,13 @@ public class GameThread implements Runnable {
         showPlayers(players);
     }
 
+    protected void SetPlayerStarted(Boolean auto) {
+        for(int m = 0;m < 5;m++) {
+            players[m].isStarter = true;
+            players[m].isOnCourt = true;
+        }
+        showPlayers(players);
+    }
     /**
      * 呼叫暂停，更改球员状态——状态模式
      */
