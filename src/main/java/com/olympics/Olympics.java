@@ -1,10 +1,14 @@
 package com.olympics;
 
 import com.olympics.AOP.LogInterceptor;
+import com.olympics.AbstractFactory.AbstractFactoryTest;
 import com.olympics.BasketballScene.BasketballSceneDemo;
 import com.olympics.ChainOfResponsibility.HandlerChain;
+import com.olympics.Composite.CompositeTest;
 import com.olympics.DependencyInjection.DependencyInjection;
 import com.olympics.Repository.Repository;
+import com.olympics.Factory.FactoryTest;
+import com.olympics.Interpreter.InterpreterTest;
 import com.olympics.Visitor.ObjectStructure;
 import com.olympics.Visitor.Visitor;
 
@@ -40,13 +44,13 @@ public class Olympics {
         System.out.println(mkTestName("流接口模式"));
         
         System.out.println(mkTestName("工厂模式"));
-
+        FactoryTest.main(null);
         System.out.println(mkTestName("抽象工厂模式"));
-
+        AbstractFactoryTest.main(null);
         System.out.println(mkTestName("组合模式"));
-
+        CompositeTest.main(null);
         System.out.println(mkTestName("解释器模式"));
-
+        InterpreterTest.main(null);
         System.out.println(mkTestName("依赖注入模式"));
         DependencyInjection.main(null);
         
