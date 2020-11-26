@@ -1,5 +1,5 @@
 package com.olympics.AbstractFactory;
 
-public interface MemberProduct2 {
+public interface MemberProductAbstract {
     public void product();
 }

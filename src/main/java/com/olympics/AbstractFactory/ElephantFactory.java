@@ -1,8 +1,8 @@
 package com.olympics.AbstractFactory;
 
-public class LionFactory implements Provider {
+public class ElephantFactory implements Provider {
     @Override
     public MemberProductAbstract produce() {
-        return new LionProductAbstract();
+        return new ElepantProductAbstract();
     }
 }
