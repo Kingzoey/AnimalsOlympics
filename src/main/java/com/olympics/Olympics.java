@@ -6,6 +6,7 @@ import com.olympics.ChainOfResponsibility.HandlerChain;
 import com.olympics.Composite.CompositeTest;
 import com.olympics.DependencyInjection.DependencyInjection;
 import com.olympics.Factory.FactoryTest;
+import com.olympics.InformationNotice.InformNote;
 import com.olympics.Interpreter.InterpreterTest;
 import com.olympics.Visitor.ObjectStructure;
 import com.olympics.Visitor.Visitor;
@@ -27,13 +28,13 @@ public class Olympics {
 
         System.out.println(mkTestName("备忘录模式"));
 
-        System.out.println(mkTestName("模板模式"));
-
-        System.out.println(mkTestName("单例模式"));
-
-        System.out.println(mkTestName("观察者模式"));
-
-        System.out.println(mkTestName("桥接模式"));
+        System.out.println(mkTestName("模板模式、单例模式、观察者模式、桥接模式"));
+        InformNote.main(null);
+//        System.out.println(mkTestName("单例模式"));
+//
+//        System.out.println(mkTestName("观察者模式"));
+//
+//        System.out.println(mkTestName("桥接模式"));
 
         System.out.println(mkTestName("规格模式"));
 
