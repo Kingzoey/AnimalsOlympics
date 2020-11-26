@@ -1,5 +1,6 @@
 package com.olympics;
 
+import com.olympics.BusinessDelegate.BusinessTest;
 import com.olympics.abstractfactory.AbstractFactoryTest;
 import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;
@@ -12,6 +13,7 @@ import com.olympics.decorator.WaterPoloGame;
 import com.olympics.dependencyinjection.DependencyInjection;
 import com.olympics.factory.FactoryTest;
 import com.olympics.filter.FilterTest;
+import com.olympics.flyweight.ChessTest;
 import com.olympics.informationnotice.InformNote;
 import com.olympics.interpreter.InterpreterTest;
 import com.olympics.iterator.IteratorTest;
@@ -36,13 +38,17 @@ public class Olympics {
         System.out.println("动物运动会测试");
 
         System.out.println(mkTestName("多例模式"));
-        // 在这里添加该模式的测试代码
+        MultitonTest.main(args);
 
         System.out.println(mkTestName("外观模式"));
-
+        FacadeTest.main(args);
+        
         System.out.println(mkTestName("享元模式"));
-
+        ChessTest.main(args);
+        ChessmanTest.main(args);   
+        
         System.out.println(mkTestName("备忘录模式"));
+        MementoTest.main(args);
 
         System.out.println(mkTestName("模板模式、单例模式、观察者模式、桥接模式"));
         InformNote.main(args);
@@ -131,6 +137,6 @@ public class Olympics {
         MVCPatternDemo.main(args);
 
         System.out.println(mkTestName("业务代表模式"));
-        // ...
+        BusinessTest.main(args);
     }
 }
