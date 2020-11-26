@@ -1,10 +1,12 @@
 package com.olympics;
 
+import com.olympics.AOP.LogInterceptor;
 import com.olympics.AbstractFactory.AbstractFactoryTest;
 import com.olympics.BasketballScene.BasketballSceneDemo;
 import com.olympics.ChainOfResponsibility.HandlerChain;
 import com.olympics.Composite.CompositeTest;
 import com.olympics.DependencyInjection.DependencyInjection;
+import com.olympics.Repository.Repository;
 import com.olympics.Factory.FactoryTest;
 import com.olympics.InformationNotice.InformNote;
 import com.olympics.Interpreter.InterpreterTest;
@@ -65,5 +67,11 @@ public class Olympics {
         System.out.println(mkTestName("建造者模式"));
         
         // ...
+        
+        System.out.println(mkTestName("面向切面编程模式"));
+        LogInterceptor.main(null);
+        
+        System.out.println(mkTestName("资源库模式"));
+        Repository.main(null);
     }
 }
