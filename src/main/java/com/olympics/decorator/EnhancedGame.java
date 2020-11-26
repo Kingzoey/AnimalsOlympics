@@ -5,10 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Decorator;
-
-import java.util.*;
-import java.util.stream.Collectors;
+package com.olympics.decorator;
 
 public class EnhancedGame extends GameDecorator {
     public static void main(String[] args) {

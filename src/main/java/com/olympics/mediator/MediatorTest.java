@@ -1,6 +1,6 @@
 package com.olympics.mediator;
 
-public class Client {
+public class MediatorTest {
  
     /**
      * @param args

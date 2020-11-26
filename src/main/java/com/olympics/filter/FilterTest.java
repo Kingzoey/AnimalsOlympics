@@ -1,7 +1,7 @@
 package com.olympics.filter;
 import java.util.List;
 import java.util.LinkedList;
-public class Client {
+public class FilterTest {
     public static void main(String[] args) {
         List<Sporters> Sporterss = new LinkedList<>();
 

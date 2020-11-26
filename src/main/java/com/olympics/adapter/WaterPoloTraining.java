@@ -5,12 +5,11 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Adapter;
+package com.olympics.adapter;
 
-import com.olympics.Decorator.EnhancedGame;
-import com.olympics.Decorator.WaterPoloGame;
+import com.olympics.decorator.EnhancedGame;
+import com.olympics.decorator.WaterPoloGame;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class WaterPoloTraining implements Training {

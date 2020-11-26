@@ -5,7 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Pool;
+package com.olympics.objectpool;
 
 public class SwimmingPool {
     public boolean available = true;

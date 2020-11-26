@@ -5,7 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Pool;
+package com.olympics.objectpool;
 
 import java.util.*;
 

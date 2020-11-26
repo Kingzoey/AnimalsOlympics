@@ -5,9 +5,9 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Adapter;
+package com.olympics.adapter;
 
-import com.olympics.Decorator.*;
+import com.olympics.decorator.Game;
 
 public class WaterPoloAdapter implements Training {
     Game game;

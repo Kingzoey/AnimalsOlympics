@@ -5,7 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Command;
+package com.olympics.command;
 
 public interface Order {
     void execute();

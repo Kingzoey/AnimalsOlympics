@@ -1,6 +1,6 @@
 package com.olympics.nullobject;
 
-public class Client {
+public class NullObjectTest {
     public static void main(String[] args) {
         InfoFactory infoFactory = new InfoFactory();
         Info info = infoFactory.getInfo(-1);

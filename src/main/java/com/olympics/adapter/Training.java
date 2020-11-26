@@ -5,7 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Adapter;
+package com.olympics.adapter;
 
 public interface Training {
     void train();

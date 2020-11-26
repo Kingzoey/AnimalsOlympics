@@ -1,15 +1,15 @@
 /*
  * @Project : AnimalsOlympics
- * @File    : Freekicks.java
+ * @File    : Foul.java
  * @Author  : 刘文朔(liuwenshuo2000@126.com)
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Command;
+package com.olympics.command;
 
-public class Freekicks implements Order {
+public class Foul implements Order {
     @Override
     public void execute() {
-
+        
     }
 }

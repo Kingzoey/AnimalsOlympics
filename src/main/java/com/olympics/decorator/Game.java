@@ -5,7 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Decorator;
+package com.olympics.decorator;
 
 public abstract class Game {
     int[] gameData;

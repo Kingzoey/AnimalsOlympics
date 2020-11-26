@@ -1,6 +1,6 @@
 package com.olympics.iterator;
 
-public class Client {
+public class IteratorTest {
 
 
     public static void main(String[] args) {

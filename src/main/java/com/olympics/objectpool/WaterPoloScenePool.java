@@ -5,9 +5,7 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Pool;
-
-import java.lang.reflect.Field;
+package com.olympics.objectpool;
 
 public class WaterPoloScenePool extends ObjectPool<SwimmingPool> {
     public static void main(String[] args) {

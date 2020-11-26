@@ -5,13 +5,12 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Decorator;
+package com.olympics.decorator;
 
-import com.olympics.Command.*;
-import com.olympics.Pool.*;
+import com.olympics.command.*;
+import com.olympics.objectpool.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class WaterPoloGame extends Game {
     public static void main(String[] args) {

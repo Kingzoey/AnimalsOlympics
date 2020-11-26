@@ -5,9 +5,9 @@
  * @Software: IntelliJ IDEA
  */
 
-package com.olympics.Command;
+package com.olympics.command;
 
-import com.olympics.Decorator.WaterPoloGame;
+import com.olympics.decorator.WaterPoloGame;
 
 public class ChangePlayers implements Order {
     public ChangePlayers(WaterPoloGame w){

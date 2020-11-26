@@ -1,15 +1,26 @@
 package com.olympics;
 
 import com.olympics.abstractfactory.AbstractFactoryTest;
+import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;
 import com.olympics.basketballscene.BasketballSceneDemo;
+import com.olympics.builder.TeamTest;
 import com.olympics.chainofresponsibility.HandlerChain;
 import com.olympics.composite.CompositeTest;
 import com.olympics.compositeentity.CompositeEntity;
+import com.olympics.decorator.WaterPoloGame;
 import com.olympics.dependencyinjection.DependencyInjection;
 import com.olympics.factory.FactoryTest;
+import com.olympics.filter.FilterTest;
 import com.olympics.informationnotice.InformNote;
 import com.olympics.interpreter.InterpreterTest;
+import com.olympics.iterator.IteratorTest;
+import com.olympics.mediator.MediatorTest;
+import com.olympics.mvc.MVCPatternDemo;
+import com.olympics.nullobject.NullObjectTest;
+import com.olympics.objectpool.WaterPoloScenePool;
+import com.olympics.prototype.PrototypeTrophy;
+import com.olympics.registry.Registry;
 import com.olympics.repository.Repository;
 import com.olympics.specification.SpecificationTest;
 import com.olympics.specification.Sport;
@@ -41,7 +52,7 @@ public class Olympics {
 
         System.out.println(mkTestName("观察者模式"));
 
-        System.out.println(mkTestName("数据映射模式、流接口模式和封装字段模式"));
+        System.out.println(mkTestName("数据映射模式、流接口模式、封装字段模式"));
         Sport.main(args);
 
         System.out.println(mkTestName("工厂模式"));
@@ -69,7 +80,36 @@ public class Olympics {
         BasketballSceneDemo.main(args);
 
         System.out.println(mkTestName("建造者模式"));
+        TeamTest.main(args);
 
+        System.out.println(mkTestName("注册模式"));
+        Registry.main(args);
+        
+        System.out.println(mkTestName("空对象模式"));
+        NullObjectTest.main(args);
+
+        System.out.println(mkTestName("原型模式"));
+        PrototypeTrophy.main(args);
+        
+        System.out.println(mkTestName("过滤器模式"));
+        FilterTest.main(args);
+
+        System.out.println(mkTestName("迭代器模式"));
+        IteratorTest.main(args);
+
+        System.out.println(mkTestName("中介者模式"));
+        MediatorTest.main(args);
+
+        System.out.println(mkTestName("对象池模式"));
+        WaterPoloScenePool.main(args);
+
+        System.out.println(mkTestName("适配器模式"));
+        WaterPoloTraining.main(args);
+
+        System.out.println(mkTestName("装饰器模式"));
+        WaterPoloGame.main(args);
+
+        System.out.println(mkTestName("命令模式"));
         // ...
 
         System.out.println(mkTestName("面向切面编程模式"));
@@ -83,5 +123,14 @@ public class Olympics {
 
         System.out.println(mkTestName("传输对象模式"));
         TransferObjectPatternDemo.main(args);
+
+        System.out.println(mkTestName("规则模式"));
+        // ...
+
+        System.out.println(mkTestName("模型-视图-控制器模式"));
+        MVCPatternDemo.main(args);
+
+        System.out.println(mkTestName("业务代表模式"));
+        // ...
     }
 }
