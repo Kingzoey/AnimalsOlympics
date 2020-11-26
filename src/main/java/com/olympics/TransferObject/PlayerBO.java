@@ -15,7 +15,7 @@ public class PlayerBO {
         players.add(player3);
         players.add(player4);
     }
-    public void deleteStudent(PlayerVO player) {
+    public void deletePlayer(PlayerVO player) {
         players.remove(player.getRollNo());
         System.out.println("Player: Num: "
             + player.getRollNo() + " "+player.getName()+", deleted from database");
