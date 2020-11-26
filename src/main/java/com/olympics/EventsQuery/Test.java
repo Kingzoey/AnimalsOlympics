@@ -1,4 +1,5 @@
 package com.olympics.EventsQuery;
+//此类用于测试根据指定条件查询比赛项目，使用了规格模式，与本包中除Sports类外其余类为同一设计模式
 
 import java.util.ArrayList;
 

@@ -1,5 +1,7 @@
 package com.olympics.Multiton;
 
+import com.olympics.ChainOfResponsibility.Tiger;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -28,29 +30,31 @@ public class Referee {
 		refereeInfo.add(info);
 	}
 	
-	public static Referee getInstance(int num){
+	
+	/*
+	String Nam[] = null;
+	Nam = new String[6];
+	*/
+	static String name[] = { "Tiger", "Lion", "Cat", "Dog", "Wolf", "Bear", "Monkey", "Chimpanzee", "Bull", "Goat",
+			"Shark", "Dolphin", "Eagle", "Whale", "Horse", "Elephant", "Owl", "Duck", "Puma", "Fox", "Swordfish" };
+
+	public static Referee getInstance(int num) {
 		count = num;
 		/*
-		if (num == 0) {
-			System.out.println("裁判数量添加中！");
-			return (Referee) refereeList.get(0);
-		}else if(num == 1){
-			System.out.println("裁判数量添加中！");
-			return (Referee) refereeList.get(1);
-		}else if(num == 2){
-			System.out.println("裁判数量添加中！");
-			return (Referee) refereeList.get(2);
-		}else if(num == 3){
-			System.out.println("裁判数量已达到上限，无法继续添加！");
-			return (Referee) refereeList.get(3);
-		}else{
-			System.out.println("裁判数量已超过上限！自动终止！");
-			return null;
-		}
-		*/
-		while(num < MAX)
-		{
-			System.out.println("裁判数量添加中！");
+		 * if (num == 0) { System.out.println("裁判数量添加中！"); return (Referee)
+		 * refereeList.get(0); }else if(num == 1){ System.out.println("裁判数量添加中！");
+		 * return (Referee) refereeList.get(1); }else if(num == 2){
+		 * System.out.println("裁判数量添加中！"); return (Referee) refereeList.get(2); }else
+		 * if(num == 3){ System.out.println("裁判数量已达到上限，无法继续添加！"); return (Referee)
+		 * refereeList.get(3); }else{ System.out.println("裁判数量已超过上限！自动终止！"); return
+		 * null; }
+		 */
+		Random random = new Random();
+		int radom = 0;
+		while (num < MAX) {
+			radom = random.nextInt(20);
+			String getname = name[radom];
+			System.out.println("裁判数量添加中！添加裁判：" + getname );
 			return (Referee) refereeList.get(num);
 		}
 		System.out.println("裁判数量已超过上限！自动终止！");
