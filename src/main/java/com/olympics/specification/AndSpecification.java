@@ -1,4 +1,4 @@
-package com.olympics.eventsquery;
+package com.olympics.specification;
 
 
 public class AndSpecification extends CompositeSpecification {
@@ -11,7 +11,7 @@ public class AndSpecification extends CompositeSpecification {
     }
 
     @Override
-    public boolean isSatisfiedBy(Object candidate) {
+    public boolean isSatisfiedBy(Sport candidate) {
         return left.isSatisfiedBy(candidate) && right.isSatisfiedBy(candidate);
     }
 }

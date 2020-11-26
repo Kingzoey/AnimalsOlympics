@@ -1,19 +1,20 @@
 package com.olympics;
 
-import com.olympics.AOP.LogInterceptor;
-import com.olympics.AbstractFactory.AbstractFactoryTest;
-import com.olympics.BasketballScene.BasketballSceneDemo;
-import com.olympics.ChainOfResponsibility.HandlerChain;
-import com.olympics.Composite.CompositeTest;
-import com.olympics.CompositeEntity.CompositeEntity;
-import com.olympics.DependencyInjection.DependencyInjection;
-import com.olympics.Repository.Repository;
-import com.olympics.Factory.FactoryTest;
-import com.olympics.InformationNotice.InformNote;
-import com.olympics.Interpreter.InterpreterTest;
-import com.olympics.TransferObject.TransferObjectPatternDemo;
-import com.olympics.Visitor.ObjectStructure;
-import com.olympics.Visitor.Visitor;
+import com.olympics.abstractfactory.AbstractFactoryTest;
+import com.olympics.aop.LogInterceptor;
+import com.olympics.basketballscene.BasketballSceneDemo;
+import com.olympics.chainofresponsibility.HandlerChain;
+import com.olympics.composite.CompositeTest;
+import com.olympics.compositeentity.CompositeEntity;
+import com.olympics.dependencyinjection.DependencyInjection;
+import com.olympics.factory.FactoryTest;
+import com.olympics.informationnotice.InformNote;
+import com.olympics.interpreter.InterpreterTest;
+import com.olympics.repository.Repository;
+import com.olympics.specification.SpecificationTest;
+import com.olympics.specification.Sport;
+import com.olympics.transferobject.TransferObjectPatternDemo;
+import com.olympics.visitor.ObjectStructure;
 
 public class Olympics {
     public static String mkTestName(String patternName) {
@@ -33,53 +34,54 @@ public class Olympics {
         System.out.println(mkTestName("备忘录模式"));
 
         System.out.println(mkTestName("模板模式、单例模式、观察者模式、桥接模式"));
-        InformNote.main(null);
-//        System.out.println(mkTestName("单例模式"));
-//
-//        System.out.println(mkTestName("观察者模式"));
-//
-//        System.out.println(mkTestName("桥接模式"));
+        InformNote.main(args);
 
         System.out.println(mkTestName("规格模式"));
+        SpecificationTest.main(args);
 
         System.out.println(mkTestName("观察者模式"));
 
-        System.out.println(mkTestName("流接口模式"));
-        
+        System.out.println(mkTestName("数据映射模式、流接口模式和封装字段模式"));
+        Sport.main(args);
+
         System.out.println(mkTestName("工厂模式"));
-        FactoryTest.main(null);
+        FactoryTest.main(args);
+
         System.out.println(mkTestName("抽象工厂模式"));
-        AbstractFactoryTest.main(null);
+        AbstractFactoryTest.main(args);
+
         System.out.println(mkTestName("组合模式"));
-        CompositeTest.main(null);
+        CompositeTest.main(args);
+
         System.out.println(mkTestName("解释器模式"));
-        InterpreterTest.main(null);
+        InterpreterTest.main(args);
+
         System.out.println(mkTestName("依赖注入模式"));
-        DependencyInjection.main(null);
-        
+        DependencyInjection.main(args);
+
         System.out.println(mkTestName("责任链模式"));
-        HandlerChain.main(null);
+        HandlerChain.main(args);
 
         System.out.println(mkTestName("访问者模式"));
-        ObjectStructure.main(null);
+        ObjectStructure.main(args);
 
         System.out.println(mkTestName("静态工厂模式, 状态模式, 代理模式, 策略模式"));
-        BasketballSceneDemo.main(null);
+        BasketballSceneDemo.main(args);
 
         System.out.println(mkTestName("建造者模式"));
-        
+
         // ...
-        
+
         System.out.println(mkTestName("面向切面编程模式"));
-        LogInterceptor.main(null);
-        
+        LogInterceptor.main(args);
+
         System.out.println(mkTestName("资源库模式"));
-        Repository.main(null);
-        
+        Repository.main(args);
+
         System.out.println(mkTestName("组合实体模式"));
-        CompositeEntity.main(null);
-        
+        CompositeEntity.main(args);
+
         System.out.println(mkTestName("传输对象模式"));
-        TransferObjectPatternDemo.main(null);
+        TransferObjectPatternDemo.main(args);
     }
 }
