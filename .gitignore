@@ -1,6 +1,7 @@
 
 # Java
 target/
+.factorypath
 
 # IDEA
 
