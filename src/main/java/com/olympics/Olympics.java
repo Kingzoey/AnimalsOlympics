@@ -5,11 +5,13 @@ import com.olympics.AbstractFactory.AbstractFactoryTest;
 import com.olympics.BasketballScene.BasketballSceneDemo;
 import com.olympics.ChainOfResponsibility.HandlerChain;
 import com.olympics.Composite.CompositeTest;
+import com.olympics.CompositeEntity.CompositeEntity;
 import com.olympics.DependencyInjection.DependencyInjection;
 import com.olympics.Repository.Repository;
 import com.olympics.Factory.FactoryTest;
 import com.olympics.InformationNotice.InformNote;
 import com.olympics.Interpreter.InterpreterTest;
+import com.olympics.TransferObject.TransferObjectPatternDemo;
 import com.olympics.Visitor.ObjectStructure;
 import com.olympics.Visitor.Visitor;
 
@@ -73,5 +75,11 @@ public class Olympics {
         
         System.out.println(mkTestName("资源库模式"));
         Repository.main(null);
+        
+        System.out.println(mkTestName("组合实体模式"));
+        CompositeEntity.main(null);
+        
+        System.out.println(mkTestName("传输对象模式"));
+        TransferObjectPatternDemo.main(null);
     }
 }
