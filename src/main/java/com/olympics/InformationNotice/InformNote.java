@@ -1,5 +1,7 @@
 package com.olympics.InformationNotice;
 
+import java.util.Scanner;
+
 public class InformNote extends InformNotesTemplate{
     public static void main(String[] args) {
  
@@ -15,6 +17,10 @@ public class InformNote extends InformNotesTemplate{
         //创建发布中心
         InformCenter FC = InformCenter.getInformCenter();
         //创建动物运动员
+        System.out.println("是否通过桥接模式创建三个跑步运动员Y/N？");
+        Scanner sc = new Scanner(System.in);
+        String str=sc.next();
+        
         
         athlete dog_runner = new runner(new dog());
         dog_runner.setName("小狗");
@@ -30,7 +36,10 @@ public class InformNote extends InformNotesTemplate{
         FC.addAthlete(dog_runner);
         FC.addAthlete(cat_runner);
         FC.addAthlete(bear_runner);
-        FC.toNotify("比赛开始时间");
+        System.out.println("请输入通知这三名运动员的消息");
+        Scanner scc = new Scanner(System.in);
+        String mess=scc.next();
+        FC.toNotify(mess);
         
     }
 

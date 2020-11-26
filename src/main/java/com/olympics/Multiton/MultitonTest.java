@@ -1,6 +1,6 @@
 package com.olympics.Multiton;
 
-public class MultitionTest {
+public class MultitonTest {
 	public static void main(String[] args) {
 		System.out.println("比赛即将开始，生成本场比赛裁判！");
 		Referee mReferee = Referee.getInstance(0);

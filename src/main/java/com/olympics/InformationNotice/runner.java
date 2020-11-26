@@ -13,6 +13,6 @@ public class runner extends athlete{
 
     @Override
     public void update(String message) {
-        System.out.println("观察者模式:"+fanName + "知道了通知中心发布的" + message);
+        System.out.println("观察者模式: "+fanName + "知道了通知中心发布的消息：" + message);
     }
 }
