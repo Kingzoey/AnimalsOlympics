@@ -1,5 +1,5 @@
 package com.olympics.EventsQuery;
-
+//此类用于测试根据日期、地点查询比赛项目，使用到数据映射模式、流接口模式和封装字段模式。
 public class Sports {
     private String name;
     int num;
