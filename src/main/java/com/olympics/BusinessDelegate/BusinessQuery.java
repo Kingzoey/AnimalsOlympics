@@ -5,19 +5,19 @@ package com.olympics.BusinessDelegate;
 public class BusinessQuery {
     // 热饮服务
 
-    public static final String TEA="TEA";
+    public static final String TEA = "TEA";
 
     // 用餐服务
 
-    public static final String FOOD="FOOD";
+    public static final String FOOD = "FOOD";
 
     // 娱乐服务
 
-    public static final String GAME="GAME";
+    public static final String GAME = "GAME";
 
     // 住房服务
 
-    public static final String ROOM="ROOM";
+    public static final String ROOM = "ROOM";
     /**
      * 通过注册中心查询服务
      * @param serverName

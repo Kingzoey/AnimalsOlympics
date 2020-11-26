@@ -24,7 +24,7 @@ public class BusinessTest {
         for (int i = 0; i < 10; i++) {
             radom = random.nextInt(5);
             switch (radom) {
-                // 获得服务
+                // 通过随机数随机获得服务
                 case 0:
                     // 热饮服务名
                     businessDelegate.setServerName(BusinessQuery.TEA);
