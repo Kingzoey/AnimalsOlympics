@@ -2,6 +2,7 @@ package com.olympics.Composite;
 
 public class CompositeTest {
     public static void main(String[] args) {
+        System.out.println("Let's see the composition of rabbit soccor team!");
         Member member1=new Member("rabbit1");
         Member member2=new Member("rabbit2");
         Member member3=new Member("rabbit3");
