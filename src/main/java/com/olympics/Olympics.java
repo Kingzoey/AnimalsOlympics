@@ -1,6 +1,10 @@
 package com.olympics;
 
-import com.olympics.BusinessDelegate.BusinessTest;
+import com.olympics.flyweight.*;
+import com.olympics.facade.*;
+import com.olympics.multiton.*;
+import com.olympics.memento.*;
+import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.abstractfactory.AbstractFactoryTest;
 import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;

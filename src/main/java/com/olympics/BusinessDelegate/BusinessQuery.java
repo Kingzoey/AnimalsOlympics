@@ -1,4 +1,4 @@
-package com.olympics.BusinessDelegate;
+package com.olympics.businessdelegate;
     
 // 模拟运动员服务中心
 
