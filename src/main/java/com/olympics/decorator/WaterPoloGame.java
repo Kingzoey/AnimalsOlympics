@@ -8,8 +8,7 @@
 package com.olympics.decorator;
 
 import com.olympics.command.*;
-import com.olympics.objectpool.SwimmingPool;
-import com.olympics.objectpool.WaterPoloScenePool;
+import com.olympics.objectpool.*;
 
 import java.util.*;
 
@@ -93,41 +92,52 @@ public class WaterPoloGame extends Game {
         boolean attacker;
         int formation1 = random.nextInt(3);
         int formation2 = random.nextInt(3);
+        double f1, f2;
+        double buff1 = 1, buff2 = 1;
         Map<Player, Integer> working1, working2;
         gameData = new int[6];
 
         switch (formation1) {
             case 0:
                 System.out.println("队伍1采用3-3阵型。");
+                f1 = 1;
                 break;
             case 1:
                 System.out.println("队伍1采用2-2-2阵型。");
+                f1 = 0.8;
                 break;
-            case 2:
+            default:
                 System.out.println("队伍1采用4-2阵型。");
+                f1 = 1.25;
                 break;
         }
 
         switch (formation2) {
             case 0:
                 System.out.println("队伍2采用3-3阵型。");
+                f2 = 1;
                 break;
             case 1:
                 System.out.println("队伍2采用2-2-2阵型。");
+                f2 = 0.8;
                 break;
-            case 2:
+            default:
                 System.out.println("队伍2采用4-2阵型。");
+                f2 = 1.25;
                 break;
         }
         System.out.println("按下回车开始比赛。");
         scan.nextLine();
-
+        double roundTime;
         for (int round = 1; round < 5; ++round) {
-            if (round > 1) {
-
-            }
             while (true) {
-                time += random.nextDouble() + 0.5;
+                roundTime = random.nextDouble() + 0.5;
+                time += roundTime;
+                try {
+                    Thread.sleep((long) (time * 10));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 if (time > 15) {
                     time = 0;
                     if (round == 4)
@@ -141,6 +151,7 @@ public class WaterPoloGame extends Game {
 
                     System.out.println("回车停止休息。");
                     scan.nextLine();
+                    System.out.println("双方更换球员。");
                     Order o = new ChangePlayers(this);
                     o.execute();
                     System.out.println("队伍一：");
@@ -198,45 +209,65 @@ public class WaterPoloGame extends Game {
                     strength2 += (pl.weight + pl.speed + pl.skill) * v.getValue();
                 }
 
+                if (attacker) {
+                    strength1 *= f1;
+                    strength2 /= f2;
+                } else {
+                    strength1 /= f1;
+                    strength2 *= f2;
+                }
+
+                strength1 *= buff1;
+                strength2 *= buff2;
+
+                Order nextOrder;
+                buff1 = 1;
+                buff2 = 1;
+
                 if (strength1 == strength2 && strength1 == 0)
                     continue;
                 else if (strength1 == 0) {
                     score2++;
+                    buff1 = 1.5;
                     System.out.println("二号队选手" + randomID(working2) + "进球！");
                     gameData[3] += 1;
                     continue;
                 } else if (strength2 == 0) {
                     score1++;
+                    buff2 = 1.5;
                     System.out.println("一号队选手" + randomID(working1) + "进球！");
                     gameData[0] += 1;
                     continue;
                 }
-
-                Order nextOrder;
 
                 double result = random.nextDouble();
                 if (attacker) {
                     if (result < (strength1 - strength2) * 2 / (strength1 + strength2)) {
                         score1++;
                         nextOrder = new Goal(1, randomID(working1));
+                        buff2 = 1.5;
 //                        System.out.println("一号队选手" + randomID(working1) + "进球！");
                         gameData[0] += 1;
                     } else if (result < (strength1) / (strength1 + strength2)) {
                         if (random.nextDouble() < 0.15) {
+                            buff1 = 2;
                             nextOrder = new Freekicks(2, randomID(working2));
 //                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
                             gameData[2] += 1;
                         } else {
+                            buff1 = 1.2;
                             nextOrder = new Foul(2, randomID(working2));
 //                            System.out.println("二号队选手" + randomID(working2) + "出界！");
                             gameData[4] += 1;
                         }
                     } else {
                         if (random.nextDouble() < 0.15) {
+                            buff2 = 2;
                             nextOrder = new Freekicks(1, randomID(working1));
 //                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
                             gameData[5] += 1;
                         } else {
+                            buff2 = 1.2;
                             nextOrder = new Foul(1, randomID(working1));
 //                            System.out.println("一号队选手" + randomID(working1) + "出界！");
                             gameData[1] += 1;
@@ -245,25 +276,30 @@ public class WaterPoloGame extends Game {
                 } else {
                     if (result < (strength2 - strength1) * 2 / (strength1 + strength2)) {
                         score2++;
+                        buff1 = 1.5;
                         nextOrder = new Goal(2, randomID(working2));
 //                        System.out.println("二号队选手" + randomID(working2) + "进球！");
                         gameData[3] += 1;
                     } else if (result < (strength1) / (strength1 + strength2)) {
                         if (random.nextDouble() < 0.15) {
+                            buff2 = 2;
                             nextOrder = new Freekicks(1, randomID(working1));
 //                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
                             gameData[5] += 1;
                         } else {
+                            buff2 = 1.2;
                             nextOrder = new Foul(1, randomID(working1));
 //                            System.out.println("一号队选手" + randomID(working1) + "出界！");
                             gameData[1] += 1;
                         }
                     } else {
                         if (random.nextDouble() < 0.15) {
+                            buff1 = 2;
                             nextOrder = new Freekicks(2, randomID(working2));
 //                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
                             gameData[2] += 1;
                         } else {
+                            buff1 = 1.2;
                             nextOrder = new Foul(2, randomID(working2));
 //                            System.out.println("二号队选手" + randomID(working2) + "出界！");
                             gameData[4] += 1;
