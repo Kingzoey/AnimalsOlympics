@@ -1,19 +1,15 @@
 package com.olympics;
 
-import com.olympics.businessdelegate.BusinessTest;
-import com.olympics.flyweight.*;
-import com.olympics.facade.*;
-import com.olympics.multiton.*;
-import com.olympics.memento.*;
-import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.abstractfactory.AbstractFactoryTest;
 import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;
 import com.olympics.basketballscene.BasketballSceneDemo;
 import com.olympics.builder.TeamTest;
+import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.chainofresponsibility.HandlerChain;
 import com.olympics.composite.CompositeTest;
 import com.olympics.compositeentity.CompositeEntity;
+import com.olympics.dataaccessobject.DaoPatternTest;
 import com.olympics.decorator.WaterPoloGame;
 import com.olympics.dependencyinjection.DependencyInjection;
 import com.olympics.facade.FacadeTest;
@@ -142,5 +138,8 @@ public class Olympics {
 
         System.out.println(mkTestName("业务代表模式"));
         BusinessTest.main(args);
+
+        System.out.println(mkTestName("数据访问对象模式"));
+        DaoPatternTest.main(args);
     }
 }
