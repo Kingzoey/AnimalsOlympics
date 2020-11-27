@@ -1,6 +1,6 @@
 package com.olympics.repository;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,7 +26,7 @@ public class Repository {
         Player player = new Player();
         player.setId((Integer) data.get("id"));
         player.setAge((Integer) data.get("age"));
-        player.setJoinTime((Date) data.get("join_time"));
+        player.setJoinTime((GregorianCalendar) data.get("join_time"));
         player.setName((String) data.get("name"));
         player.setTeam((String) data.get("team"));
         return player;
@@ -57,7 +57,7 @@ public class Repository {
         Player player = new Player();
         player.setName("Tom");
         player.setAge(18);
-        player.setJoinTime(new Date());
+        player.setJoinTime(new GregorianCalendar());
         player.setTeam("T&J");
 
         System.out.println("将Player实例存储到持久层中");

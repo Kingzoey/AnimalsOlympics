@@ -1,6 +1,6 @@
 package com.olympics.repository;
 
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  *
@@ -9,14 +9,14 @@ public class Player {
     private int id;
     private String name;
     private int age;
-    private Date joinTime;
+    private Calendar joinTime;
     private String team;
 
     public String getName() {
         return name;
     }
 
-    public Date getJoinTime() {
+    public Calendar getJoinTime() {
         return joinTime;
     }
 
@@ -40,7 +40,7 @@ public class Player {
         this.id = id;
     }
 
-    public void setJoinTime(Date joinTime) {
+    public void setJoinTime(Calendar joinTime) {
         this.joinTime = joinTime;
     }
 

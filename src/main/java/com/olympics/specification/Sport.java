@@ -1,7 +1,7 @@
 package com.olympics.specification;
 
 import java.util.Calendar;
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * 此类用于测试根据日期、地点查询比赛项目，使用到数据映射模式、流接口模式和封装字段模式。
@@ -10,7 +10,7 @@ public class Sport {
     private String name;
     private int num;
     private String place;
-    private Date date;
+    private Calendar date;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +20,11 @@ public class Sport {
         return this.name;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Calendar date) {
         this.date = date;
     }
 
-    public Date getDate() {
+    public Calendar getDate() {
         return this.date;
     }
 
@@ -50,31 +50,31 @@ public class Sport {
 
     public static void main(String[] args) {
         Sport running = new Sport();
-        running.date = new Date(2020, Calendar.SEPTEMBER, 20);
+        running.date = new GregorianCalendar(2020, Calendar.SEPTEMBER, 20);
         running.setPlace("操场");
 
         Sport swimming = new Sport();
-        swimming.date = new Date(2020, Calendar.SEPTEMBER, 19);
+        swimming.date = new GregorianCalendar(2020, Calendar.SEPTEMBER, 19);
         swimming.setPlace("泳池");
 
         Sport basketball = new Sport();
-        basketball.date = new Date(2020, Calendar.SEPTEMBER, 18);
+        basketball.date = new GregorianCalendar(2020, Calendar.SEPTEMBER, 18);
         basketball.setPlace("篮球场");
 
         Sport football = new Sport();
-        football.date = new Date(2020, Calendar.SEPTEMBER, 17);
+        football.date = new GregorianCalendar(2020, Calendar.SEPTEMBER, 17);
         football.setPlace("足球场");
 
         Sport fencing = new Sport();
-        fencing.date = new Date(2020, Calendar.SEPTEMBER, 14);
+        fencing.date = new GregorianCalendar(2020, Calendar.SEPTEMBER, 14);
         fencing.setPlace("击剑馆");
 
         Sport badminton = new Sport();
-        badminton.date = new Date(2020, Calendar.DECEMBER, 11);
+        badminton.date = new GregorianCalendar(2020, Calendar.DECEMBER, 11);
         badminton.setPlace("羽毛球馆");
 
         Sport hurdle = new Sport();
-        hurdle.date = new Date(2020, Calendar.DECEMBER, 2);
+        hurdle.date = new GregorianCalendar(2020, Calendar.DECEMBER, 2);
         hurdle.setPlace("操场");
 
         running.showPlaceOf("跑步");
