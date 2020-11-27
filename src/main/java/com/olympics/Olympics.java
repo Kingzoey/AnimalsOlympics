@@ -1,11 +1,11 @@
 package com.olympics;
 
-import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.abstractfactory.AbstractFactoryTest;
 import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;
 import com.olympics.basketballscene.BasketballSceneDemo;
 import com.olympics.builder.TeamTest;
+import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.chainofresponsibility.HandlerChain;
 import com.olympics.composite.CompositeTest;
 import com.olympics.compositeentity.CompositeEntity;
@@ -26,7 +26,6 @@ import com.olympics.memento.MementoTest;
 import com.olympics.multiton.MultitonTest;
 import com.olympics.mvc.MVCPatternDemo;
 import com.olympics.nullobject.NullObjectTest;
-import com.olympics.objectpool.WaterPoloScenePool;
 import com.olympics.prototype.PrototypeTrophy;
 import com.olympics.registry.Registry;
 import com.olympics.repository.Repository;
