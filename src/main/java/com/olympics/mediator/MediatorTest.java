@@ -16,7 +16,7 @@ public class MediatorTest {
         mediator.setCollA(MembersA);
         mediator.setCollB(MembersB);
         MembersA.contact("我是裁判A，我要判罚B成员");
-        MembersB.contact("我是B成员,我要通知裁判A进行队员更换");
+        MembersB.contact("我是成员B，我要通知A裁判进行队员更换");
     }
 
 }

@@ -8,7 +8,7 @@ public class MembersA extends Members {
     }
 
     public void getMessage(String message) {
-        System.out.println("裁判A" + name + "获得信息" + message);
+        System.out.println("裁判A" + "-" + name + "-" + "获得信息：" + message);
     }
 
     //成员A与中介者通信
