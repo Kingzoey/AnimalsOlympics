@@ -1,4 +1,4 @@
-package com.olympics.BusinessDelegate;
+package com.olympics.businessdelegate;
 
 // 娱乐服务
 
