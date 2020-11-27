@@ -2,6 +2,8 @@ package com.olympics.flyweight;
 
 import java.util.Random;
 
+/*享元模式*/
+
 // 测试类
 public class ChessTest {
     public static void main(String[] args) {
