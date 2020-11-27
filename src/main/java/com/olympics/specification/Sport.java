@@ -78,9 +78,9 @@ public class Sport {
         hurdle.setPlace("操场");
 
         running.showPlaceOf("跑步");
-        swimming.showDateOf("游泳");
-        swimming.showDateOf("游泳");
-        hurdle.showDateOf(" 跨栏");
+        swimming.showPlaceOf("游泳");
+        swimming.showPlaceOf("游泳");
+        hurdle.showPlaceOf(" 跨栏");
         System.out.println("游泳项目被查询过" + swimming.num + "次");
         System.out.println("跑步项目被查询过" + running.num + "次");
         System.out.println("跨栏项目被查询过" + hurdle.num + "次");
