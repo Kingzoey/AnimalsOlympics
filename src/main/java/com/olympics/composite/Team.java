@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Team extends Node {
-    List<Node> nodeList = new ArrayList<>();
+    List<Node> nodeList = new ArrayList<>(); 
 
     public Team(String name) {
         super(name);

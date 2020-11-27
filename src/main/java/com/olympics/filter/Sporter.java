@@ -1,13 +1,13 @@
 package com.olympics.filter;
 
-public class Sporters {
+public class Sporter {
 
 
     private String name;//姓名
     private String gender;//性别
 
 
-    public Sporters(String name, String gender) {
+    public Sporter(String name, String gender) {
         this.name = name;
         this.gender = gender;
     }

@@ -7,5 +7,5 @@ public abstract class Node {
         this.name = name;
     }
 
-    abstract void show();
+    public abstract void show();
 }

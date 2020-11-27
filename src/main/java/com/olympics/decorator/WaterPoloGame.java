@@ -7,8 +7,7 @@
 
 package com.olympics.decorator;
 
-import com.olympics.command.ChangePlayers;
-import com.olympics.command.Order;
+import com.olympics.command.*;
 import com.olympics.objectpool.SwimmingPool;
 import com.olympics.objectpool.WaterPoloScenePool;
 
