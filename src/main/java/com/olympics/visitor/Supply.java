@@ -1,14 +1,13 @@
 package com.olympics.visitor;
 
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * 运动会供应品
  */
 public class Supply {
     protected String name;
-    protected Date productionDate;
+    protected Calendar productionDate;
 
     Supply(String name, Calendar productionDate) {
         this.name = name;
@@ -19,7 +18,7 @@ public class Supply {
         return name;
     }
 
-    protected Date getProductionDate() {
+    protected Calendar getProductionDate() {
         return productionDate;
     }
 }
