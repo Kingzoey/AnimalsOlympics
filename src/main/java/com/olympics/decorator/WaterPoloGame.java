@@ -211,55 +211,68 @@ public class WaterPoloGame extends Game {
                     continue;
                 }
 
+                Order nextOrder;
+
                 double result = random.nextDouble();
                 if (attacker) {
                     if (result < (strength1 - strength2) * 2 / (strength1 + strength2)) {
                         score1++;
-                        System.out.println("一号队选手" + randomID(working1) + "进球！");
+                        nextOrder = new Goal(1, randomID(working1));
+//                        System.out.println("一号队选手" + randomID(working1) + "进球！");
                         gameData[0] += 1;
                     } else if (result < (strength1) / (strength1 + strength2)) {
                         if (random.nextDouble() < 0.15) {
-                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
+                            nextOrder = new Freekicks(2, randomID(working2));
+//                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
                             gameData[2] += 1;
                         } else {
-                            System.out.println("二号队选手" + randomID(working2) + "出界！");
+                            nextOrder = new Foul(2, randomID(working2));
+//                            System.out.println("二号队选手" + randomID(working2) + "出界！");
                             gameData[4] += 1;
                         }
                     } else {
                         if (random.nextDouble() < 0.15) {
-                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
+                            nextOrder = new Freekicks(1, randomID(working1));
+//                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
                             gameData[5] += 1;
                         } else {
-                            System.out.println("一号队选手" + randomID(working1) + "出界！");
+                            nextOrder = new Foul(1, randomID(working1));
+//                            System.out.println("一号队选手" + randomID(working1) + "出界！");
                             gameData[1] += 1;
                         }
                     }
                 } else {
                     if (result < (strength2 - strength1) * 2 / (strength1 + strength2)) {
                         score2++;
-                        System.out.println("二号队选手" + randomID(working2) + "进球！");
+                        nextOrder = new Goal(2, randomID(working2));
+//                        System.out.println("二号队选手" + randomID(working2) + "进球！");
                         gameData[3] += 1;
                     } else if (result < (strength1) / (strength1 + strength2)) {
                         if (random.nextDouble() < 0.15) {
-                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
+                            nextOrder = new Freekicks(1, randomID(working1));
+//                            System.out.println("一号队选手" + randomID(working2) + "违规，二号队任意球！");
                             gameData[5] += 1;
                         } else {
-                            System.out.println("一号队选手" + randomID(working1) + "出界！");
+                            nextOrder = new Foul(1, randomID(working1));
+//                            System.out.println("一号队选手" + randomID(working1) + "出界！");
                             gameData[1] += 1;
                         }
                     } else {
                         if (random.nextDouble() < 0.15) {
-                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
+                            nextOrder = new Freekicks(2, randomID(working2));
+//                            System.out.println("二号队选手" + randomID(working2) + "违规，一号队任意球！");
                             gameData[2] += 1;
                         } else {
-                            System.out.println("二号队选手" + randomID(working2) + "出界！");
+                            nextOrder = new Foul(2, randomID(working2));
+//                            System.out.println("二号队选手" + randomID(working2) + "出界！");
                             gameData[4] += 1;
                         }
                     }
                 }
+                nextOrder.execute();
             }
         }
-        
+
         System.out.printf("比分为\t%-3d：%3d\n", score1, score2);
         return score1 > score2;
     }
