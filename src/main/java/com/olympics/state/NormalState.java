@@ -3,12 +3,12 @@ package com.olympics.state;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: NormalState
- * @author: Zhenyu Dong
- * @description: PlayerState的子类，正常状态，设置属性及转变方法
- * @designPattern: State Pattern
- * @date: 2020.11.12
- * @version: 1.0
+ * PlayerState的子类，正常状态，设置属性及转变方法
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern State Pattern
+ * @date 2020.11.12
  */
 
 public class NormalState extends PlayerState {

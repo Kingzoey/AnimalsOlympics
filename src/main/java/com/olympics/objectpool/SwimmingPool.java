@@ -10,7 +10,7 @@ package com.olympics.objectpool;
 public class SwimmingPool {
     public boolean available = true;
     public SwimmingPoolType type;
-    
+
     public SwimmingPool(SwimmingPoolType type) {
         this.type = type;
     }

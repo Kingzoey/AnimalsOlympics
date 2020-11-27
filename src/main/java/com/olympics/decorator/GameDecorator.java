@@ -13,9 +13,9 @@ public abstract class GameDecorator extends Game {
     public GameDecorator(Game decoratedGame) {
         this.decoratedGame = decoratedGame;
     }
-    
+
     @Override
-    public boolean game(){
+    public boolean game() {
         return decoratedGame.game();
     }
 }

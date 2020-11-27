@@ -1,19 +1,18 @@
 package com.olympics.interpreter;
-import java.util.*;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class TerminalExpression implements Expression {
-    private Set<String> set= new HashSet<String>();
-    public TerminalExpression(String[] data)
-    {
-        for(int i=0;i<data.length;i++)
-            set.add(data[i]);
+    private final Set<String> set = new HashSet<>();
+
+    public TerminalExpression(String[] data) {
+        Collections.addAll(set, data);
     }
+
     @Override
     public boolean interpret(String context) {
-        if(set.contains(context))
-        {
-            return true;
-        }
-        return false;
+        return set.contains(context);
     }
 }

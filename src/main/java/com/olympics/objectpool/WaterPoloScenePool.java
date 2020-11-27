@@ -9,7 +9,7 @@ package com.olympics.objectpool;
 
 public class WaterPoloScenePool extends ObjectPool<SwimmingPool> {
     public static void main(String[] args) {
-        
+
     }
 
     public WaterPoloScenePool() {

@@ -1,11 +1,11 @@
 package com.olympics.staticfactory;
 
 /**
- * @className: PlayerGuard
- * @author: Zhenyu Dong
- * @description: Player的子类，后卫球员，得分强防守弱
- * @date: 2020.11.11
- * @version: 1.0
+ * Player的子类，后卫球员，得分强防守弱
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.11
  */
 
 public class PlayerGuard extends BasketballPlayer {

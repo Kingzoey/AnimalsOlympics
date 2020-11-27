@@ -8,27 +8,25 @@ public class ScheduleIterator implements Iterator {
     private Schedule Schedule;
     private int index;
 
-    public ScheduleIterator(Schedule Schedule){
+    public ScheduleIterator(Schedule Schedule) {
         this.Schedule = Schedule;
         this.index = 0;
     }
 
     /**
      * 检测是否还有下一比赛
-     * @return
+     *
+     * @return some object
      */
     @Override
     public boolean hasNext() {
-        if(index<Schedule.getLength()){
-            return true;
-        }else {
-            return false;
-        }
+        return index < Schedule.getLength();
     }
 
     /**
      * 返回下一比赛
-     * @return
+     *
+     * @return some object
      */
     @Override
     public Object next() {

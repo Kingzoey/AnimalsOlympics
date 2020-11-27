@@ -15,7 +15,7 @@ public class IteratorTest {
         //获得赛程表迭代器
         Iterator iterator = schedule.iterator();
         //迭代
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Match match = (Match) iterator.next();
             System.out.println(match.getName());
         }

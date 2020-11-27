@@ -10,5 +10,6 @@ public abstract class Athlete {
     public String getName() {
         return name;
     }
+
     public abstract float getSpeed();
 }

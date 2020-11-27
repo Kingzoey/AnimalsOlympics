@@ -3,12 +3,12 @@ package com.olympics.state;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: PlayerState
- * @author: Zhenyu Dong
- * @description: 比赛中，球员状态会改变，抽象类
- * @designPattern: State Pattern
- * @date: 2020.11.12
- * @version: 1.0
+ * 比赛中，球员状态会改变，抽象类
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern State Pattern
+ * @date 2020.11.12
  */
 
 public abstract class PlayerState {

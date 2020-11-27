@@ -4,26 +4,26 @@ package com.olympics.mediator;
 public class ConcreteMediator extends Mediator {
     MembersA collA;
     MembersB collB;
- 
+
     public MembersA getCollA() {
         return collA;
     }
- 
+
     public void setCollA(MembersA collA) {
         this.collA = collA;
     }
- 
+
     public MembersB getCollB() {
         return collB;
     }
- 
+
     public void setCollB(MembersB collB) {
         this.collB = collB;
     }
- 
+
     @Override
     public void contact(String content, Members coll) {
-        if (coll==collA) {
+        if (coll == collA) {
             collB.getMessage(content);
         } else {
             collA.getMessage(content);

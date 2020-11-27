@@ -6,7 +6,7 @@ public class MVCPatternDemo {
         System.out.println("轮到兔子选手");
         System.out.println("目前是第九箭射完之后的成绩");
         //从数据库获取比赛成绩信息
-        Player model  = retrievePlayerFromDatabase();
+        Player model = retrievePlayerFromDatabase();
 
         //创建一个视图：把比赛信息输出到控制台
         PlayerView view = new PlayerView();
@@ -21,7 +21,7 @@ public class MVCPatternDemo {
         controller.updateView();
     }
 
-    private static Player retrievePlayerFromDatabase(){
+    private static Player retrievePlayerFromDatabase() {
         Player student = new Player();
         student.setName("Rabbit");
         student.setScore("90");

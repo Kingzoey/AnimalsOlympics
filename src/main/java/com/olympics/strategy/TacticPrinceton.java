@@ -3,11 +3,11 @@ package com.olympics.strategy;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: TacticPrinceton
- * @author: Zhenyu Dong
- * @description: Tactics接口的实现之一，普林斯顿+紧逼
- * @date: 2020.11.10
- * @version: 1.0
+ * Tactics接口的实现之一，普林斯顿+紧逼
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.10
  */
 
 public class TacticPrinceton implements Tactics {

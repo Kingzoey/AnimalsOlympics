@@ -6,7 +6,8 @@ package com.olympics.iterator;
 public interface Aggregate {
     /**
      * 获得迭代器对象
-     * @return
+     *
+     * @return some object
      */
-    public abstract Iterator iterator();
+    Iterator iterator();
 }

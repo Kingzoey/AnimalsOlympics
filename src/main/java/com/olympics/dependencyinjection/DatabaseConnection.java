@@ -2,9 +2,9 @@ package com.olympics.dependencyinjection;
 
 public interface DatabaseConnection {
 
-    public void connect();
+    void connect();
 
-    public void disconnect();
+    void disconnect();
 
-    public void query(String sql);
+    void query(String sql);
 }

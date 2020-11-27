@@ -4,15 +4,15 @@ import com.olympics.state.NormalState;
 import com.olympics.state.PlayerStateChange;
 
 /**
- * @className: BasketballPlayer
- * @author: Zhenyu Dong
- * @description: 在篮球场景中，培养球员采用静态工厂模式
- * @designPattern: Static Factory
- * @date: 2020.11.11
- * @version: 1.0
+ * 在篮球场景中，培养球员采用静态工厂模式
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern Static Factory
+ * @date 2020.11.11
  */
 public abstract class BasketballPlayer {
-    public String name = "";
+    public String name;
     public int age;
     public int number;
 

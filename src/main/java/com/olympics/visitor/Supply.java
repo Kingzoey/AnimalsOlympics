@@ -1,5 +1,6 @@
 package com.olympics.visitor;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -8,8 +9,8 @@ import java.util.Date;
 public class Supply {
     protected String name;
     protected Date productionDate;
-    
-    Supply(String name, Date productionDate){
+
+    Supply(String name, Calendar productionDate) {
         this.name = name;
         this.productionDate = productionDate;
     }

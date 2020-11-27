@@ -10,6 +10,6 @@ package com.olympics.command;
 public class Foul implements Order {
     @Override
     public void execute() {
-        
+
     }
 }

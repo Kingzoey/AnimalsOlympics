@@ -7,14 +7,14 @@ public class TransferObjectPatternDemo {
         //输出所有运动员
         for (PlayerVO player : playerBusinessObject.getAllPlayers()) {
             System.out.println("Player: [Num : "
-                +player.getRollNo()+", Name : "+player.getName()+", Game : "+player.getGame()+", Time : "+player.getTime()+" ]");
+                + player.getRollNo() + ", Name : " + player.getName() + ", Game : " + player.getGame() + ", Time : " + player.getTime() + " ]");
         }
         System.out.println("现更新参赛号码为0的运动员信息：将老虎改成猎豹");
         //更新运动员
-        PlayerVO player =playerBusinessObject.getPlayer(0);
+        PlayerVO player = playerBusinessObject.getPlayer(0);
         player.setName("猎豹");
         playerBusinessObject.updatePlayer(player);
-        
+
         System.out.println("更新后的数据库现有运动员比赛信息：");
         //输出更新后的所有运动员
         for (PlayerVO player2 : playerBusinessObject.getAllPlayers()) {

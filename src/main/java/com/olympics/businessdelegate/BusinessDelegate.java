@@ -15,8 +15,8 @@ public class BusinessDelegate {
 
     /**
      * 服务名，标识
-     * @param serverName
-     * @return
+     *
+     * @param serverName some argument
      */
     public void setServerName(String serverName) {
         this.serverName = serverName;
@@ -24,10 +24,9 @@ public class BusinessDelegate {
 
     /**
      * 处理业务
-     * @return void
      */
-    public void dealBusiness(){
-        this.businessService=BusinessQuery.getBusinessService(this.serverName);
+    public void dealBusiness() {
+        this.businessService = BusinessQuery.getBusinessService(this.serverName);
         this.businessService.dosomething();
     }
 }

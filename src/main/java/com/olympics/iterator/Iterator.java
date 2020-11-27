@@ -7,14 +7,16 @@ public interface Iterator {
 
     /**
      * 检测是否还有下一个元素
-     * @return
+     *
+     * @return some object
      */
-    public abstract boolean hasNext();
+    boolean hasNext();
 
     /**
      * 获得下一个元素
-     * @return
+     *
+     * @return some object
      */
-    public abstract Object next();
+    Object next();
 
 }

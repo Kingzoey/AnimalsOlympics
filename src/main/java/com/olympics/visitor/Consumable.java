@@ -1,6 +1,7 @@
 package com.olympics.visitor;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * 消耗品类
@@ -10,13 +11,13 @@ public class Consumable extends Supply implements Element {
     /**
      * 表示消耗品状态
      */
-    public enum Status {GOOD, BAD}; 
-    
+    public enum Status {GOOD, BAD}
+
     private Status status = Status.GOOD;
     private float amount = 1;
-    private float price = 0;
+    private final float price;
 
-    public Consumable(String name, Date productionDate, float  price) {
+    public Consumable(String name, Calendar productionDate, float price) {
         super(name, productionDate);
         this.price = price;
     }
@@ -33,7 +34,7 @@ public class Consumable extends Supply implements Element {
     public void setStatus(Status status) {
         this.status = status;
     }
-    
+
     public float getAmount() {
         return amount;
     }

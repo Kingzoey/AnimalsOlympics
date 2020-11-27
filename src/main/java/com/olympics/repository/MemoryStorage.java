@@ -7,18 +7,13 @@ import java.util.Map;
  * 数据持久层——内存
  */
 public class MemoryStorage implements Storage {
-    private final HashMap<Integer, Map<String, Object>> repo;
+    private final HashMap<Integer, Map<String, Object>> repo = new HashMap<>();
     private Integer lastId = 0;
-
-    MemoryStorage() {
-        repo = new HashMap<>();
-        lastId = 0;
-    }
 
     /**
      * 存储数据对象
      *
-     * @param data
+     * @param data some argument
      * @return id
      */
     @Override
@@ -30,7 +25,7 @@ public class MemoryStorage implements Storage {
     /**
      * 取出数据对象
      *
-     * @param id
+     * @param id some argument
      * @return Object
      */
     @Override
@@ -41,7 +36,7 @@ public class MemoryStorage implements Storage {
     /**
      * 删除数据对象
      *
-     * @param id
+     * @param id some argument
      */
     @Override
     public void delete(int id) {

@@ -1,6 +1,6 @@
 package com.olympics.visitor;
 
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  * 运动器材类
@@ -12,8 +12,8 @@ public class Equipment extends Supply implements Element {
     private boolean isBroken = false;
     private int quality = -1;
 
-    public Equipment(String name, Date productionDate, String brandName) {
-        super(name, productionDate); 
+    public Equipment(String name, Calendar productionDate, String brandName) {
+        super(name, productionDate);
         this.brandName = brandName;
     }
 
@@ -25,7 +25,7 @@ public class Equipment extends Supply implements Element {
     public String getBrandName() {
         return brandName;
     }
-    
+
     public void setBrandName(String brandName) {
         this.brandName = brandName;
     }
@@ -63,7 +63,7 @@ public class Equipment extends Supply implements Element {
     public void setBroken(boolean broken) {
         isBroken = broken;
     }
-    
+
     public void repair() {
         isBroken = false;
     }

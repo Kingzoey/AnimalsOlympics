@@ -10,8 +10,9 @@ public class Rabbit extends Athlete implements Handler {
 
     /**
      * 兔子通过跳跃完成比赛
-     * @param segment
-     * @return
+     *
+     * @param segment some argument
+     * @return some object
      */
     @Override
     public float process(Segment segment) {

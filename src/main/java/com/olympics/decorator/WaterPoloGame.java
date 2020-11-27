@@ -7,8 +7,10 @@
 
 package com.olympics.decorator;
 
-import com.olympics.command.*;
-import com.olympics.objectpool.*;
+import com.olympics.command.ChangePlayers;
+import com.olympics.command.Order;
+import com.olympics.objectpool.SwimmingPool;
+import com.olympics.objectpool.WaterPoloScenePool;
 
 import java.util.*;
 
@@ -259,7 +261,7 @@ public class WaterPoloGame extends Game {
                 }
             }
         }
-        
+
         System.out.printf("比分为\t%-3d：%3d\n", score1, score2);
         return score1 > score2;
     }

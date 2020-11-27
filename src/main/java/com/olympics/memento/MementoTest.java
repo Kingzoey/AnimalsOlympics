@@ -1,4 +1,5 @@
 package com.olympics.memento;
+
 import java.util.Random;
 
 public class MementoTest {
@@ -7,8 +8,7 @@ public class MementoTest {
 
         Game game = new Game();
         Random random = new Random();
-        int radom = 0;
-        radom = random.nextInt(100);
+        int radom = random.nextInt(100);
         System.out.println("游戏开始，随机模拟下棋");
         System.out.println("模拟下棋" + radom + "步");
         game.setPlayerStep(radom);

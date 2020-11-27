@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class GameThread implements Runnable {
 
     private String flag = "start";
-    private String control = "";
+    private final String control = "";
     private Boolean isTimeOut = false;
     protected Boolean isTeamMake = false;
 
@@ -43,12 +43,12 @@ public class GameThread implements Runnable {
             if (name.equals("0")) {
                 System.out.println("退出球员组建，👋👋！");
                 break;
-            } else if(name.equals("x"))  {
-                String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
-                int[] ages = {36,32,35,26,39,32,29,25};
-                int[] numbers = {23,13,3,6,11,30,2,32};
-                String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
-                for(int m = 0;m < names.length;m++) {
+            } else if (name.equals("x")) {
+                String[] names = {"James", "Harden", "Paul", "Davis", "Yaoming", "Curry", "Leonard", "Towns"};
+                int[] ages = {36, 32, 35, 26, 39, 32, 29, 25};
+                int[] numbers = {23, 13, 3, 6, 11, 30, 2, 32};
+                String[] positions = {"Forward", "Guard", "Guard", "Forward", "Center", "Guard", "Forward", "Center"};
+                for (int m = 0; m < names.length; m++) {
                     BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
                     players[m] = player;
                 }
@@ -65,40 +65,39 @@ public class GameThread implements Runnable {
         System.out.println("组建球队成功！");
         showPlayers(players);
     }
-    
+
     protected void MakeTeam(Boolean auto) {
         System.out.println();
         System.out.println("组建球队测试ing……");
-        String[] names = {"James","Harden","Paul","Davis","Yaoming","Curry","Leonard","Towns"};
-        int[] ages = {36,32,35,26,39,32,29,25};
-        int[] numbers = {23,13,3,6,11,30,2,32};
-        String[] positions = {"Forward","Guard","Guard","Forward","Center","Guard","Forward","Center"};
-        for(int m = 0;m < names.length;m++) {
+        String[] names = {"James", "Harden", "Paul", "Davis", "Yaoming", "Curry", "Leonard", "Towns"};
+        int[] ages = {36, 32, 35, 26, 39, 32, 29, 25};
+        int[] numbers = {23, 13, 3, 6, 11, 30, 2, 32};
+        String[] positions = {"Forward", "Guard", "Guard", "Forward", "Center", "Guard", "Forward", "Center"};
+        for (int m = 0; m < names.length; m++) {
             BasketballPlayer player = PlayerTraining.trainPlayer(names[m], ages[m], numbers[m], positions[m]);
             players[m] = player;
         }
         System.out.println("组建球队完成！");
         showPlayers(players);
     }
+
     /**
      * 设置首发球员
      */
     protected void SetPlayerStarted() {
-        /**
-         * 确立首发球员
-         */
+        // 确立首发球员
         int i = 0;
         System.out.println("确立首发球员5人:");
         System.out.println("如果使用默认数据，请输入 x ，否则输入 a ");
         String choice = read.next();
         if (choice.equals("x")) {
-            for(int m = 0;m < 5;m++) {
+            for (int m = 0; m < 5; m++) {
                 players[m].isStarter = true;
                 players[m].isOnCourt = true;
             }
             showPlayers(players);
             return;
-        } 
+        }
         boolean isFind = false;
         System.out.println("请输入首发球员的号码:");
         for (i = 0; i < 5; ) {
@@ -125,20 +124,19 @@ public class GameThread implements Runnable {
     protected void SetPlayerStarted(Boolean auto) {
         System.out.println();
         System.out.println("设置首发球员ing……");
-        for(int m = 0;m < 5;m++) {
+        for (int m = 0; m < 5; m++) {
             players[m].isStarter = true;
             players[m].isOnCourt = true;
         }
         System.out.println("设置首发球员测试完成！");
         showPlayers(players);
     }
+
     /**
      * 呼叫暂停，更改球员状态——状态模式
      */
     protected void PlayerStateChange() {
-        /**
-         * 球员状态测试，生成时默认为正常状态——状态模式
-         */
+        // 球员状态测试，生成时默认为正常状态——状态模式
         System.out.println("每场比赛，球员的状态会起伏不定");
         System.out.println("便于测试，直观体现，你可以手动改变球员状态:");
         System.out.println("1.失常状态\t2.超常状态\t3.正常状态\t(两两状态之间转化不同) q.退出");
@@ -172,6 +170,7 @@ public class GameThread implements Runnable {
             }
         }
     }
+
     protected void PlayerStateChange(Boolean auto) {
         System.out.println();
         System.out.println("自动测试球员状态更换ing……");
@@ -190,13 +189,11 @@ public class GameThread implements Runnable {
         System.out.println("球员状态更换测试完成");
     }
 
-        /**
-         * 呼叫暂停，进入更换球员函数——代理模式
-         */
+    /**
+     * 呼叫暂停，进入更换球员函数——代理模式
+     */
     protected void ChangePlayerOnCourt() {
-        /**
-         * 球员更换——代理模式
-         */
+        // 球员更换——代理模式
         System.out.println("更换球员测试");
         while (true) {
             System.out.println("请输入被替换球员的号码:");
@@ -222,16 +219,16 @@ public class GameThread implements Runnable {
         }
         showPlayers(players);
     }
-    
+
     protected void ChangePlayerOnCourt(Boolean auto) {
         System.out.println();
         System.out.println("自动测试替换球员ing……");
-        String[] nowPlayers = {"23","3","11"};
-        String[] nextPlayers = {"2","30","32"};
-        for (int m = 0;m < 3;m++) {
+        String[] nowPlayers = {"23", "3", "11"};
+        String[] nextPlayers = {"2", "30", "32"};
+        for (int m = 0; m < 3; m++) {
             BasketballPlayer nowPlayer = find(players, nowPlayers[m]);
             BasketballPlayer nextPlayer = find(players, nextPlayers[m]);
-            SubstitutePlayer subPlayer = new SubstitutePlayer(nowPlayer,nextPlayer);
+            SubstitutePlayer subPlayer = new SubstitutePlayer(nowPlayer, nextPlayer);
             subPlayer.play();
         }
         System.out.println("自动替换测试完成！现在球员情况:");
@@ -242,9 +239,7 @@ public class GameThread implements Runnable {
      * 呼叫暂停，进入战术选择函数——策略模式
      */
     protected void ChangeTactics() {
-        /**
-         * 战术选择测试——策略模式
-         */
+        // 战术选择测试——策略模式
         System.out.println("进入战术选择模式:");
         System.out.println("1.进攻战术：普林斯顿    防守战术：半场紧逼 ");
         System.out.println("2.进攻战术：跑   轰    防守战术：3-2联防 ");
@@ -273,7 +268,7 @@ public class GameThread implements Runnable {
     protected void ChangeTactics(Boolean auto) {
         System.out.println();
         System.out.println("自动使用战术测试ing……");
-        for (int m = 1;m < 4 ;m++) {
+        for (int m = 1; m < 4; m++) {
             CallTactics tactics = new CallTactics(m);
             tactics.executeTactic(players);
             System.out.println();
@@ -282,12 +277,12 @@ public class GameThread implements Runnable {
         showPlayers(players);
     }
 
-        /**
-         * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
-         *
-         * @param s
-         * @return 输入有字符则染回false，纯数字返回true
-         */
+    /**
+     * 判断用户输入是否合法 主要目的是给出相应提示并维持循环
+     *
+     * @param s some argument
+     * @return 输入有字符则染回false，纯数字返回true
+     */
     public boolean isLegal(String s) {
         for (int i = 0; i < s.length(); i++) {
             if (!Character.isDigit(s.charAt(i))) {
@@ -298,8 +293,8 @@ public class GameThread implements Runnable {
     }
 
     /**
-     * @param basketballPlayers
-     * @description: 输出球员信息
+     * 输出球员信息
+     * @param basketballPlayers some argument
      */
     public void showPlayers(BasketballPlayer[] basketballPlayers) {
         System.out.println("当前球员信息如下:");
@@ -312,18 +307,19 @@ public class GameThread implements Runnable {
             }
         }
     }
+
     public void showPlayers(BasketballPlayer basketballPlayer) {
         System.out.println("球员:" + basketballPlayer.name + "当前信息如下:");
         System.out.println(basketballPlayer.position + "\t\t" + basketballPlayer.stateAttackAbility + "\t" + basketballPlayer.stateDefenseAbility + "\t"
             + basketballPlayer.isOnCourt + "\t\t" + basketballPlayer.isStarter + "\t");
     }
 
-        /**
-         * @param players
-         * @param search
-         * @return BasketballPlayer
-         * @description: 根据姓名或号码搜索球员
-         */
+    /**
+     * 根据姓名或号码搜索球员
+     * @param players some argument
+     * @param search  some argument
+     * @return BasketballPlayer
+     */
     public BasketballPlayer find(BasketballPlayer[] players, String search) {
         if (isLegal(search)) {
             int num = Integer.parseInt(search);
@@ -352,32 +348,36 @@ public class GameThread implements Runnable {
     @Override
     public void run() {
         while (true) {
-            if (this.flag.equals("start")) {
-                System.out.println("欢迎来到篮球比赛！");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (flag.equals("suspend")) {
-                try {
-                    isTimeOut = true;
-                    synchronized (control) {
-                        control.wait();
+            switch (this.flag) {
+                case "start":
+                    System.out.println("欢迎来到篮球比赛！");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (flag.equals("consume")) {
-                isTimeOut = false;
-                System.out.println("比赛继续中……");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (flag.equals("end")) {
-                return;
+                    break;
+                case "suspend":
+                    try {
+                        isTimeOut = true;
+                        synchronized (control) {
+                            control.wait();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "consume":
+                    isTimeOut = false;
+                    System.out.println("比赛继续中……");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "end":
+                    return;
             }
         }
     }
@@ -397,10 +397,8 @@ public class GameThread implements Runnable {
     public void consume() {
         if (isTimeOut) {
             this.flag = "consume";
-            if (flag.equals("consume")) {
-                synchronized (control) {
-                    control.notifyAll();
-                }
+            synchronized (control) {
+                control.notifyAll();
             }
         } else {
             System.out.println("比赛已经在进行！");

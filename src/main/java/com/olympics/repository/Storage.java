@@ -8,21 +8,24 @@ import java.util.Map;
 public interface Storage {
     /**
      * 存储数据对象
-     * @param data
+     *
+     * @param data some argument
      * @return id
      */
-    public int persist(Map<String, Object> data);
+    int persist(Map<String, Object> data);
 
     /**
      * 取出数据对象
-     * @param id
+     *
+     * @param id some argument
      * @return Object
      */
-    public Map<String, Object> retrieve(int id);
+    Map<String, Object> retrieve(int id);
 
     /**
      * 删除数据对象
-     * @param id
+     *
+     * @param id some argument
      */
-    public void delete(int id);
+    void delete(int id);
 }

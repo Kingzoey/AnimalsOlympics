@@ -5,7 +5,7 @@ package com.olympics.businessdelegate;
 public class RoomService implements BusinessService {
 
     // 处理服务
-    
+
     @Override
     public void dosomething() {
         System.out.println("提供住房🛏服务");

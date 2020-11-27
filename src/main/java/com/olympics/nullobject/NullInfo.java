@@ -1,7 +1,6 @@
 package com.olympics.nullobject;
 
-public class NullInfo implements Info
-{
+public class NullInfo implements Info {
     public boolean isNull() {
         return true;
     }

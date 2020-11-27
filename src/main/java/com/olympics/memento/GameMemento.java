@@ -1,19 +1,18 @@
 package com.olympics.memento;
 
-// 备份
-
-import lombok.Getter;
-
-@Getter
 public class GameMemento {
     private final int playerSteps;
 
     /**
-     备份步数 
-     * @param playerSteps
+     * 备份步数
+     *
+     * @param playerSteps some argument
      */
     public GameMemento(int playerSteps) {
         this.playerSteps = playerSteps;
     }
 
+    public int getPlayerSteps() {
+        return playerSteps;
+    }
 }

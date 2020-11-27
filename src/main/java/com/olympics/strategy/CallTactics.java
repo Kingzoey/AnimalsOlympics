@@ -3,12 +3,12 @@ package com.olympics.strategy;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: CallTactics
- * @author: Zhenyu Dong
- * @description: 呼叫战术，使用战术的类
- * @designPattern: Strategy
- * @date: 2020.11.10
- * @version: 1.0
+ * 呼叫战术，使用战术的类
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern Strategy
+ * @date 2020.11.10
  */
 
 public class CallTactics {

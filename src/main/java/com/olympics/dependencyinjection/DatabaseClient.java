@@ -8,7 +8,8 @@ public class DatabaseClient {
 
     /**
      * 注入数据库连接对象
-     * @param conn
+     *
+     * @param conn some argument
      */
     public void setConn(DatabaseConnection conn) {
         this.conn = conn;

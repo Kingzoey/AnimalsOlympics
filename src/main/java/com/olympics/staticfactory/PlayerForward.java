@@ -1,11 +1,11 @@
 package com.olympics.staticfactory;
 
 /**
- * @className: PlayerForward
- * @author: Zhenyu Dong
- * @description: Player的子类，前锋球员，得分防守均衡
- * @date: 2020.11.11
- * @version: 1.0
+ * Player的子类，前锋球员，得分防守均衡
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.11
  */
 
 public class PlayerForward extends BasketballPlayer {

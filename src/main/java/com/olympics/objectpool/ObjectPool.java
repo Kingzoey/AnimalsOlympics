@@ -7,15 +7,16 @@
 
 package com.olympics.objectpool;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Vector;
 
 public abstract class ObjectPool<T> {
     // locked是已占用的对象集合，unlocked是可用对象集合
     protected Vector<T> locked, unlocked;
 
     public ObjectPool() {
-        locked = new Vector<T>();
-        unlocked = new Vector<T>();
+        locked = new Vector<>();
+        unlocked = new Vector<>();
     }
 
     // 创建对象

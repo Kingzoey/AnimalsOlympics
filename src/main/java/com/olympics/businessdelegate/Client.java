@@ -1,17 +1,17 @@
 package com.olympics.businessdelegate;
-    
+
 // 客户端
 
 
 public class Client {
     // 业务代表
 
-    private BusinessDelegate businessDelegate;
+    private final BusinessDelegate businessDelegate;
 
     /**
      * 构造方法
-     * @param businessDelegate
-     * @return
+     *
+     * @param businessDelegate some argument
      */
     public Client(BusinessDelegate businessDelegate) {
         this.businessDelegate = businessDelegate;
@@ -19,9 +19,8 @@ public class Client {
 
     /**
      * 处理业务
-     * @return void
      */
-    public void dealBusiness(){
+    public void dealBusiness() {
         this.businessDelegate.dealBusiness();
     }
 }

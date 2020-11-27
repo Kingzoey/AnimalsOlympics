@@ -3,11 +3,11 @@ package com.olympics.strategy;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: TacticRunGun
- * @author: Zhenyu Dong
- * @description: Tactics接口的实现之一，跑轰+3-2联防
- * @date: 2020.11.10
- * @version: 1.0
+ * Tactics接口的实现之一，跑轰+3-2联防
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.10
  */
 
 public class TacticRunGun implements Tactics {

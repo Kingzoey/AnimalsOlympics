@@ -1,12 +1,12 @@
 package com.olympics.staticfactory;
 
 /**
- * @className: PlayerTraining
- * @author: Zhenyu Dong
- * @description: 根据用户输入培养球员（工厂类）
- * @designPattern: Static Factory
- * @date: 2020.11.11
- * @version: 1.0
+ * 根据用户输入培养球员（工厂类）
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern Static Factory
+ * @date 2020.11.11
  */
 
 public class PlayerTraining {

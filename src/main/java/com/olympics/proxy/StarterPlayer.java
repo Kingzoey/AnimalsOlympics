@@ -3,12 +3,12 @@ package com.olympics.proxy;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: StartPlayer
- * @author: Zhenyu Dong
- * @description: 首发球员，实现接口PositionProxy
- * @designPattern: Proxy Pattern
- * @date: 2020.11.16
- * @version: 1.0
+ * 首发球员，实现接口PositionProxy
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern Proxy Pattern
+ * @date 2020.11.16
  */
 
 public class StarterPlayer implements PositionProxy {

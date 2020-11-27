@@ -27,7 +27,7 @@ public class HandlerChain {
         Scanner read = new Scanner(System.in);
         System.out.println("正在进行4人接力比赛");
 
-        ArrayList<Athlete> team = new ArrayList<Athlete>();
+        ArrayList<Athlete> team = new ArrayList<>();
         team.add(new Rabbit("Buggy", 10));
         team.add(new Turtle("Double", 3));
         team.add(new Tiger("Tiger", 10));
@@ -48,6 +48,6 @@ public class HandlerChain {
         Segment segment = new Segment(meters);
         System.out.println("------开始比赛------");
         double time = chain.process(segment);
-        System.out.println("比赛结束, 该队伍总用时" + String.valueOf(time) + "s");
+        System.out.println("比赛结束, 该队伍总用时" + time + "s");
     }
 }

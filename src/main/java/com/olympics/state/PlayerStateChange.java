@@ -3,12 +3,12 @@ package com.olympics.state;
 import com.olympics.staticfactory.BasketballPlayer;
 
 /**
- * @className: PlayerStateChange
- * @author: Zhenyu Dong
- * @description: 实现球员状态变化的控制
- * @designPattern: State Pattern
- * @date: 2020.11.12
- * @version: 1.0
+ * 实现球员状态变化的控制
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @designPattern State Pattern
+ * @date 2020.11.12
  */
 
 public class PlayerStateChange {

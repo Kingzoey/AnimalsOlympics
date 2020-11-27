@@ -8,21 +8,18 @@ public class BusinessTest {
 
     /**
      * 主程序入口
-     * @param args
-     * @return void
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //创建业务代表
-        BusinessDelegate businessDelegate=new BusinessDelegate();
+        BusinessDelegate businessDelegate = new BusinessDelegate();
         //创建客户端
-        Client client=new Client(businessDelegate);
+        Client client = new Client(businessDelegate);
 
         Random random = new Random();
-        int radom = 0;
         System.out.println("业务代表模式模拟！");
-        System.out.println("随机模拟十次服务请求:-)" + "\n");	
+        System.out.println("随机模拟十次服务请求:-)" + "\n");
         for (int i = 0; i < 10; i++) {
-            radom = random.nextInt(5);
+            int radom = random.nextInt(5);
             switch (radom) {
                 // 通过随机数随机获得服务
                 case 0:
@@ -52,8 +49,8 @@ public class BusinessTest {
                     break;
             }
         }
-        
-        
+
+
         // 注入其他服务名
         businessDelegate.setServerName("AAA");
         client.dealBusiness();

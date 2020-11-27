@@ -2,9 +2,9 @@ package com.olympics.dependencyinjection;
 
 public class MysqlDatabaseConnection implements DatabaseConnection {
     boolean isConnect = false;
-    
+
     @Override
-    public void connect()  {
+    public void connect() {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -15,7 +15,7 @@ public class MysqlDatabaseConnection implements DatabaseConnection {
     }
 
     @Override
-    public void disconnect()  {
+    public void disconnect() {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -34,8 +34,5 @@ public class MysqlDatabaseConnection implements DatabaseConnection {
             e.printStackTrace();
         }
         System.out.println("MySQL数据库执行SQL语句成功");
-        if(isConnect){
-        } else{
-        }
     }
 }

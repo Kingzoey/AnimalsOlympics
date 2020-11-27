@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface PlayerDao {
 
-    public List<Player> getAllPlayers();
+    List<Player> getAllPlayers();
 
-    public Player getPlayer(int rollNo);
+    Player getPlayer(int rollNo);
 
-    public void updatePlayer(Player student);
+    void updatePlayer(Player student);
 
-    public void deletePlayer(Player student);
+    void deletePlayer(Player student);
 
 }

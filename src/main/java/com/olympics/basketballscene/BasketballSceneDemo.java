@@ -1,11 +1,11 @@
 package com.olympics.basketballscene;
 
 /**
- * @className: BasketballSceneDemo
- * @author: Zhenyu Dong
- * @description: 篮球场景的Demo，测试我的四个设计模式（静态工厂、状态模式、策略模式和代理模式）
- * @date: 2020.11.10
- * @version: 1.0
+ * 篮球场景的Demo，测试我的四个设计模式（静态工厂、状态模式、策略模式和代理模式）
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.10
  */
 
 public class BasketballSceneDemo {

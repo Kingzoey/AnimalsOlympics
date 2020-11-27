@@ -1,11 +1,11 @@
 package com.olympics.staticfactory;
 
 /**
- * @className: PlayerCenter
- * @author: Zhenyu Dong
- * @description: Player的子类，中锋球员，得分弱防守强
- * @date: 2020.11.11
- * @version: 1.0
+ * Player的子类，中锋球员，得分弱防守强
+ *
+ * @author Zhenyu Dong
+ * @version 1.0
+ * @date 2020.11.11
  */
 
 public class PlayerCenter extends BasketballPlayer {
@@ -22,5 +22,5 @@ public class PlayerCenter extends BasketballPlayer {
         this.basicAttackAbility = 60;
         this.basicDefenseAbility = 100;
     }
-    
+
 }

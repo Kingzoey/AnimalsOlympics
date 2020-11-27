@@ -5,5 +5,5 @@ package com.olympics.infra.animal;
  */
 public class FishFamily extends Animal {
 
-    
+
 }

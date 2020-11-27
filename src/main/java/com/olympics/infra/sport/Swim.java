@@ -5,5 +5,5 @@ package com.olympics.infra.sport;
  */
 public class Swim extends Sport {
 
-    
+
 }

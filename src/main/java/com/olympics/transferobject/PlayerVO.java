@@ -5,12 +5,12 @@ public class PlayerVO {
     private int rollNo;
     private String game;
     private String time;
-    
-    PlayerVO(String name, int rollNo,String game,String time){
+
+    PlayerVO(String name, int rollNo, String game, String time) {
         this.name = name;
         this.rollNo = rollNo;
-        this.game=game;
-        this.time=time;
+        this.game = game;
+        this.time = time;
     }
 
     public String getName() {
@@ -28,14 +28,15 @@ public class PlayerVO {
     public void setRollNo(int rollNo) {
         this.rollNo = rollNo;
     }
-    
+
     public String getGame() {
         return game;
     }
 
-    public void setGame(String name) {
+    public void setGame(String game) {
         this.game = game;
     }
+
     public String getTime() {
         return time;
     }

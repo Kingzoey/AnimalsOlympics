@@ -1,10 +1,9 @@
 package com.olympics.builder;
 
-public class Team
-{
+public class Team {
     private String Player1;
     private String Player2;
-    
+
     public String getPlayer1() {
         return Player1;
     }

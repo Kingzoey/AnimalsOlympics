@@ -1,8 +1,9 @@
 package com.olympics.builder;
 
-public interface ITeamBuilder
-{
-    public void buildPlayer1();
-    public void buildPlayer2();
+public interface ITeamBuilder {
+    void buildPlayer1();
+
+    void buildPlayer2();
+
     Team buildTeam();
 }

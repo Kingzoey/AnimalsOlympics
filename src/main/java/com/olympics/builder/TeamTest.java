@@ -1,9 +1,7 @@
 package com.olympics.builder;
 
-public class TeamTest
-{
-    public static void main(String[] args)
-    {
+public class TeamTest {
+    public static void main(String[] args) {
         TeamDirector director = new TeamDirector();
         Team teaml = director.TeamL(new TeamLBuilder());
         Team teamt = director.TeamT(new TeamTBuilder());

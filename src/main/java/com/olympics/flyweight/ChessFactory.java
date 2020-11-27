@@ -20,8 +20,9 @@ public class ChessFactory {
 
     /**
      * 获得棋子
+     *
      * @param c B-黑棋 W-白棋）
-     * @return
+     * @return some object
      */
     public AbstractChess getChessObject(char c) {
         // 从缓存中获得棋子对象实例
