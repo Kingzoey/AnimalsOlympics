@@ -1,5 +1,7 @@
 package com.olympics.multiton;
 
+/*多例模式*/
+
 public class MultitonTest {
     public static void main(String[] args) {
         System.out.println("比赛即将开始，生成本场比赛裁判！");

@@ -1,15 +1,16 @@
 package com.olympics;
 
+import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.abstractfactory.AbstractFactoryTest;
 import com.olympics.adapter.WaterPoloTraining;
 import com.olympics.aop.LogInterceptor;
 import com.olympics.basketballscene.BasketballSceneDemo;
 import com.olympics.builder.TeamTest;
-import com.olympics.businessdelegate.BusinessTest;
 import com.olympics.chainofresponsibility.HandlerChain;
 import com.olympics.composite.CompositeTest;
 import com.olympics.compositeentity.CompositeEntity;
 import com.olympics.dataaccessobject.DaoPatternTest;
+import com.olympics.decorator.EnhancedGame;
 import com.olympics.decorator.WaterPoloGame;
 import com.olympics.dependencyinjection.DependencyInjection;
 import com.olympics.facade.FacadeTest;
@@ -109,18 +110,15 @@ public class Olympics {
         System.out.println(mkTestName("中介者模式"));
         MediatorTest.main(args);
 
-        System.out.println(mkTestName("对象池模式"));
-        WaterPoloScenePool.main(args);
+        System.out.println(mkTestName("对象池模式，命令模式"));
+        WaterPoloGame.main(args);
 
         System.out.println(mkTestName("适配器模式"));
         WaterPoloTraining.main(args);
 
         System.out.println(mkTestName("装饰器模式"));
-        WaterPoloGame.main(args);
-
-        System.out.println(mkTestName("命令模式"));
-        // ...
-
+        EnhancedGame.main(args);
+        
         System.out.println(mkTestName("面向切面编程模式"));
         LogInterceptor.main(args);
 

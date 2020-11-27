@@ -2,6 +2,8 @@ package com.olympics.businessdelegate;
 
 import java.util.Random;
 
+/*业务代表模式*/
+
 // 主程序入口
 
 public class BusinessTest {

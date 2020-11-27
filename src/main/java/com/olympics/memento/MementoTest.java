@@ -2,6 +2,8 @@ package com.olympics.memento;
 
 import java.util.Random;
 
+/*备忘录模式*/
+
 public class MementoTest {
 
     public static void main(String[] args) {

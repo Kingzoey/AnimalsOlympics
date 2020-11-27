@@ -1,5 +1,7 @@
 package com.olympics.flyweight;
 
+/*享元模式*/
+
 // 测试类
 public class ChessmanTest {
     public static void main(String[] args) {
