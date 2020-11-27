@@ -1,7 +1,6 @@
 package com.olympics.visitor;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * 消耗品类
