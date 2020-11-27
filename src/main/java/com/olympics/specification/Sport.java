@@ -1,5 +1,7 @@
 package com.olympics.specification;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -45,7 +47,8 @@ public class Sport {
     public void showDateOf(String name) {
         this.name = name;
         this.num++;
-        System.out.println(this.name + " 项目的日期是 " + this.date);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        System.out.println(this.name + " 项目的日期是 " + df.format(this.date.getTime()));
     }
 
     public static void main(String[] args) {
@@ -79,8 +82,8 @@ public class Sport {
 
         running.showPlaceOf("跑步");
         swimming.showPlaceOf("游泳");
-        swimming.showPlaceOf("游泳");
-        hurdle.showPlaceOf(" 跨栏");
+        swimming.showDateOf("游泳");
+        hurdle.showDateOf(" 跨栏");
         System.out.println("游泳项目被查询过" + swimming.num + "次");
         System.out.println("跑步项目被查询过" + running.num + "次");
         System.out.println("跨栏项目被查询过" + hurdle.num + "次");

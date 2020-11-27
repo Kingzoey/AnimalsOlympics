@@ -5,7 +5,7 @@ class Trophy implements Cloneable {
     String info;
     String sponsor;
 
-    Trophy(String name, String info, String college) {
+    Trophy(String name, String info, String sponsor) {
         this.name = name;
         this.info = info;
         this.sponsor = sponsor;
@@ -17,7 +17,7 @@ class Trophy implements Cloneable {
     }
 
     String getName() {
-        return (this.name);
+        return name;
     }
 
     void display() {
