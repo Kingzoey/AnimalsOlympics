@@ -1,6 +1,8 @@
 package com.olympics.facade;
 import java.util.Random;
 
+/*外观模式*/
+
 // 测试类
 public class FacadeTest {
     public static void main(String[] args) {
