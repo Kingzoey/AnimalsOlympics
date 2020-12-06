@@ -51,6 +51,11 @@ public class SpecificationTest {
         hurdle.setPlace("操场");
         sports.add(hurdle);
 
+        System.out.println("现有的比赛类型");
+        for (Sport sport : sports) {
+            System.out.println(sport.getName() + "\t" + sport.getPlace());
+        }
+
         System.out.println("下面开始筛选, 条件: 跑步或球类运动, 地点在球场进行");
         ISpecification spec1 = new SportByName("跑");
         ISpecification spec2 = new SportByName("球");

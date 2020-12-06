@@ -2,7 +2,7 @@ package com.olympics.informationnotice;
 
 public abstract class InformNotesTemplate {
     void initInform() {
-        System.out.println("模板模式开始");
+//        System.out.println("模板模式开始");
     }
 
     abstract void startInform();

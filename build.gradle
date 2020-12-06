@@ -31,6 +31,7 @@ dependencies {
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     compileOnly 'org.projectlombok:lombok:1.18.12'
     compile 'org.springframework:spring-core:5.2.9.RELEASE'
+    compile 'org.fusesource.jansi:jansi:1.13'
 }
 
 repositories {
