@@ -33,6 +33,7 @@ import com.olympics.specification.Sport;
 import com.olympics.transferobject.TransferObjectPatternDemo;
 import com.olympics.visitor.ObjectStructure;
 import org.fusesource.jansi.Ansi;
+import org.fusesource.jansi.AnsiConsole;
 
 import java.io.File;
 import java.net.URL;
@@ -362,6 +363,12 @@ public class OlympicsByScene {
     }
 
     public static void main(String[] args) {
+        /* !!! 注意注意
+          如果要编译成jar在windows下直接运行, 需要加下面这一行
+          在IDEA里直接执行, 就把这行注释掉
+         */
+        AnsiConsole.systemInstall();
+        
         sceneName("2020年青青草原动物运动会开始了!");
 
         CompetitionScene();

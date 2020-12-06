@@ -20,8 +20,8 @@ java {
 }
 
 application {
-    mainClass = 'com.olympics.Olympics'
-    //mainClass = 'com.olympics.OlympicsByScene'
+    mainClass = 'com.olympics.OlympicsByScene'
+//    mainClass = 'com.olympics.Olympics'
 }
 
 run {
