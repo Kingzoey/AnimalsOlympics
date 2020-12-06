@@ -21,5 +21,9 @@ public class MultitonTest {
         if (referee != null) {
             System.out.println(referee.toString());
         }
+        referee = Referee.getInstance(4);
+        if (referee != null) {
+            System.out.println(referee.toString());
+        }
     }
 }
