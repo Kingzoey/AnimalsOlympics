@@ -230,7 +230,7 @@ public class OlympicsByScene {
     public static void LeisureScene() {
         sceneName("运动会中场休息场景");
 
-        patternName("[Facade/外观模式]");
+        patternName("[Facade/外观模式] 运动员可在商场进行休闲娱乐，可选择餐厅用餐、影院观影、超市购物三种功能");
         FacadeTest.main(null);
 
         patternName("[Business Delegate/业务代表模式] 运动员可以向前台发送请求");
@@ -239,17 +239,17 @@ public class OlympicsByScene {
 
     public static void BasketballScene() {
         sceneName("现在进入篮球比赛场景");
-        patternName("[Factory/工厂模式]");
+        patternName("[Factory/工厂模式] 为篮球比赛的的比赛双方增加队员");
         FactoryTest.main(null);
         AbstractFactoryTest.main(null);
 
-        patternName("[Static Factory/静态工厂模式, State/状态模式, Proxy/代理模式, Strategy/策略模式]");
+        patternName("[Static Factory/静态工厂模式, State/状态模式, Proxy/代理模式, Strategy/策略模式] 开始篮球比赛");
         BasketballSceneDemo.main(null);
     }
 
     public static void FoolballScene() {
         sceneName("现在进入足球比赛场景");
-        patternName("[Composite/组合模式]");
+        patternName("[Composite/组合模式] 兔子足球队包含不同的球员");
         CompositeTest.main(null);
 
         patternName("[Mediator/中介者模式] 急救员、边裁、主裁等众多工作人员和场上的各个球员、教练、赞助商等人员之间的信息交流");
@@ -264,14 +264,8 @@ public class OlympicsByScene {
         patternName("[Adapter/适配器模式] 适配比赛类和日常训练类");
         WaterPoloTraining.main(null);
 
-        patternName("[Decorator/装饰器模式]");
+        patternName("[Decorator/装饰器模式] ");
         EnhancedGame.main(null);
-    }
-
-    public static void VolleyballScene() {
-        sceneName("现在进入排球比赛场景");
-        patternName("[Interpreter/解释器模式]");
-        InterpreterTest.main(null);
     }
 
     public static void PingpongScene() {
@@ -282,7 +276,7 @@ public class OlympicsByScene {
 
     public static void RunScene() {
         sceneName("现在进入田径比赛场景");
-        patternName("[Chain of Responsibility/责任链模式]");
+        patternName("[Chain of Responsibility/责任链模式] 接力比赛传递接力棒");
         HandlerChain.main(null);
     }
 
@@ -301,7 +295,7 @@ public class OlympicsByScene {
     public static void ShotScene() {
         sceneName("现在进入射击比赛场景");
 
-        patternName("[Composite Entity/组合实体模式]");
+        patternName("[Composite Entity/组合实体模式] 将射击比赛的工具(细粒度对象)整合成工具包(粗粒度对象)");
         CompositeEntity.main(null);
 
         patternName("[MVC/模型-视图-控制器模式] 每一箭射完将成绩显示出来");
@@ -322,10 +316,10 @@ public class OlympicsByScene {
 
     public static void UtilScene() {
         sceneName("基础架构");
-        patternName("[Registry/注册模式]");
+        patternName("[Registry/注册模式] 获取系统全局Logger");
         Registry.main(null);
 
-        patternName("[AOP/面向切面编程模式]");
+        patternName("[AOP/面向切面编程模式] 测量函数性能");
         LogInterceptor.main(null);
 
         patternName("[Data Access Object/数据访问对象模式] 把低级的数据访问 API 或操作从高级的业务服务中分离出来");
@@ -362,33 +356,32 @@ public class OlympicsByScene {
 
         patternName("[Prototype/原型模式] 创建奖杯");
         PrototypeTrophy.main(null);
+        
+        patternName("[Interpreter/解释器模式] 识别出某球队是否进入了决赛");
+        InterpreterTest.main(null);
     }
 
     public static void main(String[] args) {
-        List<String> patterns = getClassName("com.olympics", true);
-        sceneName("动物运动会开幕式");
+        sceneName("2020年青青草原动物运动会开始了!");
 
         CompetitionScene();
         BasketballScene();
         FoolballScene();
-        VolleyballScene();
         PingpongScene();
         RunScene();
         WaterballScene();
         WeiqiScene();
         ShotScene();
 
-
         LeisureScene();
-
 
         RepositoryScene();
 
         AwardScene();
 
-
         UtilScene();
 
+        sceneName("2020年青青草原动物运动会圆满结束!");
     }
 
 }
